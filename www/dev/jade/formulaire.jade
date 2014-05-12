@@ -1,0 +1,81 @@
+doctype html
+html
+  head
+    title [ Kyriad ]
+    link(rel="stylesheet", href="css/main.css", type="text/css")
+    script(type="text/javascript" src="js/vendors/jquery/dist/jquery.min.js")
+    script(type="text/javascript" src="js/app.js")
+    meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  body.concours
+    nav
+      a(href='#' class='trigger')
+        img(src='images/menu.png')
+    ul.menu
+      li
+        a(href='index.html') Accueil
+      li
+        a(href='#') chambre
+        ul
+          li 
+            a(href="#") 1
+          li 
+            a(href="#") 2
+          li 
+            a(href="#") 3
+          li 
+            a(href="#") 4
+          li 
+            a(href="#") 5
+          li 
+            a(href="#") 6
+          li 
+            a(href="#") 7
+          li 
+            a(href="#") 8
+      li
+        a(href='dotations.html') dotations
+      li
+        a(href='#') réglement
+    header
+      img(src='images/logo-kyriad.png')
+      h1 Plus de confort moins de conformisme.
+    div(class='bravo')
+      div(class='accroche')
+        h2 Bravo vous avez gagné un tablette SAMSUNG GALAXY TAB 3 10'
+        h3 Remplissez le formulaire suivant pour recevoir votre lot.
+      form(method='post' class='formulaire')
+        div(class='row')
+          label(for='civilite') Civilité
+          input(id='female' name='civilite' type="radio")
+          span Madame
+          input(id='male' name='civilite' type="radio")
+          span Monsieur
+        div(class='row')
+          label(for='nom') Nom
+          input(id='nom' name='nom' type="text" placeholder="Nom*" required)
+        div(class='row')
+          label(for='prenom') Prénom
+          input(id='prenom' name='prenom' type="text" placeholder="Prénom*" required)
+        div(class='row')
+          label(for='adresse') Adresse
+          input(id='adresse' name='adresse' type="text" placeholder="Adresse*" required)
+        div(class='row')
+          label(for='cp') Code postal
+          input(id='cp' name='cp' type="number" placeholder="Code postal*" required)
+        div(class='row')
+          label(for='Ville') Ville
+          input(id='Ville' name='Ville' type="text" placeholder="Ville*" required)
+        div(class='row')
+          label(for='email') Email
+          input(id='email' name='email' type="email" placeholder="Email*" required)
+        div(class='row')
+          label(for='phone') Téléphone
+          input(id='phone' name='phone' type="number" placeholder="Téléphone*" required)
+        div(class='row big')
+          label inscription à la newsletter
+          input(id='newsletter' name='newsletter' type="checkbox" required)
+        div(class='row big')
+          label j’accepte le règlement
+          input(id='reglement' name='reglement' type="checkbox" required)
+        input(id='submit' name='submit' type="submit" value="valider")
