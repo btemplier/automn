@@ -11,7 +11,7 @@ html
     nav
       a(href='#' class='trigger')
         img(src='images/menu.png')
-    ul.menu
+    ul(id='menu')
       li
         a(href='index.html') Accueil
       li
@@ -76,6 +76,7 @@ html
           label inscription à la newsletter
           input(id='newsletter' name='newsletter' type="checkbox" required)
         div(class='row big')
-          label j’accepte le règlement
+          label j’accepte le 
+            a(href='#') règlement
           input(id='reglement' name='reglement' type="checkbox" required)
         input(id='submit' name='submit' type="submit" value="valider")

@@ -7,11 +7,11 @@ html
     script(type="text/javascript" src="js/app.js")
     meta(http-equiv="content-type" content="text/html; charset=utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  body.concours
+  body.concours.dotations
     nav
       a(href='#' class='trigger')
         img(src='images/menu.png')
-    ul.menu
+    ul(id='menu')
       li
         a(href='index.html') Accueil
       li
@@ -41,6 +41,7 @@ html
       img(src='images/logo-kyriad.png')
       h1 Plus de confort moins de conformisme.
     div(class='dotations')
+      h5 à gagner chaque jour
       ul
         li 
           img(src='images/galaxy-tab.png' alt='')
