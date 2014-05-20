@@ -1,0 +1,215 @@
+@import "mixins.styl"
+@import "variables.styl"
+@import "fonts.styl"
+@import "reset.styl"
+global-reset()
+html
+  font-size 20px
+  font-weight 100
+  height 100%
+  body.home
+    height 100%
+    .wrapper
+      height 100%
+      padding-top 170px
+      background-image url('../images/bg.jpg')
+      background-repeat no-repeat
+      background-size cover
+      color #CCC
+      background-position 50% 50%
+      h1
+        margin 0 auto 75px auto
+        background-image url('../images/logo-home.png')
+        width 265px
+        height 167px
+        text-indent -9999em
+      h2
+        margin 0 auto
+        width 660px
+        font-family 'dinbold', sans-serif
+        font-size 80px
+        text-align  center
+      ul
+        width 160px
+        margin 0 auto
+        li
+          position relative
+          font-family 'dinbold', sans-serif
+          text-align left
+          text-transform uppercase
+          color #FFF
+          width 160px
+          margin-right 20px
+          font-size 12px
+          &:nth-child(1)
+            top -425px
+            left -260px
+          &:nth-child(2)
+            top -155px
+            left -410px
+          &:nth-child(3)
+            top -410px
+            left 300px
+          &:nth-child(4)
+            top -210px
+            left 410px
+          &:nth-child(5)
+            top -10px
+            left -0px
+          a
+            border-top 3px solid #f7a11e
+            padding-top 15px
+            display block
+        
+a
+  text-decoration none
+  color white
+h1, h2, h3, h4, header
+  color #FFF
+  font-family 'interstateregular', sans-serif
+*
+  box-sizing border-box
+
+/* NAV */
+nav.main
+  text-align center
+  width 100%
+  background #0f2131
+  position fixed
+  z-index 10
+  top 0
+  height 60px
+  ul
+    clearfix()
+    padding-top 20px
+    font-family 'dinbold', sans-serif
+    width 1024px
+    margin auto
+    li
+      text-align left
+      border-top 3px solid #f7a11e
+      text-transform uppercase
+      color #FFF
+      display inline-block
+      width 160px
+      padding-top 15px
+      margin-right 20px
+      font-size 12px
+      &:first-child
+        border-top 0
+        background url('../images/logo.png') no-repeat center center
+        width 50px
+        text-indent -999em
+        height 40px
+        margin-right 30px
+        position relative
+        top -12px
+        a
+          display block
+          width 50px
+          height 40px
+          top -15px
+          position relative
+.others
+  background-image url('../images/bg.jpg')
+  background-size cover
+  .wrapper
+    width 100%
+    position relative
+    top 60px
+    min-height 600px
+    background #FFF
+    .container
+      width 980px
+      margin 200px auto 200px auto
+      color #000
+      padding 20px 0 50px 0
+      clearfix()
+      aside
+        background url('../images/picto-arrow.png') no-repeat top center
+        width 30%
+        float left
+        text-align center
+        padding 200px 0 0 50px
+        min-height 260px
+        h4, h5
+          color #1c1538
+          font-family: 'dinbold', sans-serif;
+        h4
+          font-size 13px
+        h5
+          font-size 11px
+      .easytabs-tab-content .content + aside
+        background url('../images/picto-arrow-right.png') no-repeat top center
+      .content
+        width 70%
+        float left
+        ul 
+          li
+            font-family: 'dinbold', sans-serif;
+            list-style-type square
+            list-style-position inside
+            color #1d173a
+            font-size 16px
+            font-weight 700
+          + p
+            margin-top 20px
+          &.tabs li
+            display inline
+            a
+              color #1d173a
+            &.active
+              a
+                color #f49120
+
+        h2
+          display block
+          height 75px
+          padding-left 100px
+          background url('../images/bullet.png') no-repeat
+          color #000
+          font-size 16px
+          line-height 75px
+          text-transform uppercase
+          color #1d173a
+          margin-bottom 50px
+        h3
+          color #0a1538
+          margin-bottom 10px
+          font-weight 700
+        p
+          margin-top 50px
+          font-family 'interstateregular', sans-serif
+          color #0a1538      
+          line-height 35px
+          text-align justify
+          color #0a1538
+        + p
+          margin-top 20px
+    .tabs
+      width 1024px
+      margin auto
+      clearfix()
+      li
+        font-family 'dinbold', sans-serif
+        float left
+        height 75px
+        padding-left 100px
+        background url('../images/bullet.png') no-repeat
+        color #000
+        font-size 16px
+        line-height 75px
+        text-transform uppercase
+        margin-bottom 50px
+        margin-right 20px
+        a
+          color #1d173a
+    .container 
+      .easytabs-tab-content
+        width 100%
+    #slides
+      overflow visible
+      .slides
+        color #000
+      .slidesjs-navigation
+        color #000

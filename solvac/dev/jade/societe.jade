@@ -1,0 +1,87 @@
+extends layout/layout
+
+block content
+  script(type='text/javascript' charset='utf-8')
+    | $(document).ready(function() {
+    |   $("#slides").slidesjs({
+    |     width: 400,
+    |     height: 150,
+    |     pagination: {
+    |       active: false
+    |     }
+    |   });
+    |   $('#contentTabs').easyTabs({defaultContent:1});
+    | });
+  section(class="wrapper")  
+    div(class="container")
+      section(id="contentTabs")
+        ul(class='tabs')
+          li
+            a(href='#metier') Notre métier
+          li
+            a(href='#philosophie') Notre philosophie
+          li
+            a(href='#organigramme') Organigramme
+          li
+            a(href='#histoire') Notre histoire    
+        div(id='metier')      
+          aside
+          div(class="content")
+            h3 ETUDES, RÉALISATION ET MAINTENANCE EN GÉNIE CLIMATIQUE
+            p La Solvac met à votre service l’ensemble des prestations techniques de chauffage, de ventilation et de climatisation. En tenant compte de votre activité et des spécificités de votre entreprise, la Solvac répond à chacune de vos exigences tout en vous garantissant la sécurisation des process et le respect des normes environnementales. Un service après-vente centralisé et spécialisé assure une réactivité 24h/24.
+        div(id='philosophie')
+          div(class="content")
+            h3 RESPONSABILITÉ, FIABILITÉ SONT DES RÉVÉLATEURS DE PERSONNALITÉ ET DE PERFORMANCES
+            p La responsabilité et la fiabilité sont au centre de nos préoccupations. C'est pourquoi nous sommes soucieux des conséquences de nos activités sur nos clients, nos employés, nos partenaires et le monde qui nous entoure. La Slovac s’est s’engagée, depuis de nombreuses années, à allier l’écoute, la formation et le développement dans le respect des grandes orientations sociales, éthiques et environnementales.
+          aside
+        div(id='organigramme')
+          div(class="content")
+            h3 Trombinoscope
+            div(id="slides")
+              div
+                img(src='images/trombi/fouche.png' alt='nathalie douay')
+                h4 Nathalie Douay
+                h5 Assistante de direction
+                a(href='mailto:test@solvac.fr')
+                  img(src='images/mailto.png') 
+              div
+                img(src='images/trombi/fouche.png' alt='nathalie douay')
+                h4 Laurent Boulenger
+                h5 Chargé d'affaires maintenance
+                a(href='mailto:test@solvac.fr')
+                  img(src='images/mailto.png') 
+              div
+                img(src='images/trombi/fouche.png' alt='nathalie douay')
+                h4 Marc Lacaze
+                h5 Responsable maintenance
+                a(href='mailto:test@solvac.fr')
+                  img(src='images/mailto.png') 
+              div
+                img(src='images/trombi/fouche.png' alt='nathalie douay')
+                h4 Pierre-Gilles Amiot
+                h5 Président
+                a(href='mailto:test@solvac.fr')
+                  img(src='images/mailto.png')
+              div
+                img(src='images/trombi/fouche.png' alt='nathalie douay')
+                h4 Marie-Emmanuelle Fouché
+                h5 Responsable travaux
+                a(href='mailto:test@solvac.fr')
+                  img(src='images/mailto.png')
+              div
+                img(src='images/trombi/fouche.png' alt='nathalie douay')
+                h4 Matthieu Thibout
+                h5 Technicien d'études
+                a(href='mailto:test@solvac.fr')
+                  img(src='images/mailto.png')
+              div
+                img(src='images/trombi/fouche.png' alt='nathalie douay')
+                h4 Renée Rault
+                h5 Comptable
+                a(href='mailto:test@solvac.fr')
+                  img(src='images/mailto.png')
+        div(id='histoire')
+          aside
+          div(class="content")
+            h3 50 ANS D’HISTOIRE ET DE SAVOIR-FAIRE EN GÉNIE CLIMATIQUE
+            p La solvac est l’émanation d’une branche d’activité qui avait été créée en 1967 par la société Laurent-Virot. En 1978, la Solvac se voit confier en gérance libre l’exploitation du fond de conditionnement d’air, de chauffage et de tous travaux ayant trait aux sources d'énergie. Puis, la  SOLVAC ayant conforté ses capitaux propres, décida d'acquérir le fond de commerce qui lui avait été confié. Aujourdhui, la Solvac innove pour garantir des solutions et une logistique qui contribuent à la maîtrise des enjeux énergétiques.
