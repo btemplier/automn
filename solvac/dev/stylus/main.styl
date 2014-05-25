@@ -125,9 +125,30 @@ nav.main
           height 40px
           top -15px
           position relative
-.others
-  background-image url('../images/bg.jpg')
+body.societe
+  background url('../images/bg/bg-societe.jpg') top center
   background-size cover
+  nav ul li:nth-child(2) a
+    color #f49120
+body.certifications
+  background url('../images/bg/bg-certifications.jpg') top center
+  background-size cover
+  nav ul li:nth-child(3) a
+    color #f49120
+body.contact
+  nav ul li:nth-child(4) a
+    color #f49120
+body.maintenance
+  background url('../images/bg/bg-maintenance.jpg') top center
+  background-size cover
+  nav ul li:nth-child(5) a
+    color #f49120
+body.travaux
+  background url('../images/bg/bg-travaux.jpg') top center
+  background-size cover
+  nav ul li:nth-child(6) a
+    color #f49120
+.others
   .wrapper
     width 100%
     position relative
@@ -147,10 +168,12 @@ nav.main
       clearfix()
       aside
         background url('../images/picto-arrow.png') no-repeat top center
+        background-size 200px
+        margin-top 50px
         width 30%
         float left
         text-align center
-        padding 200px 0 0 50px
+        padding 160px 0 0 50px
         min-height 260px
         h4, h5
           color #1c1538
@@ -184,6 +207,7 @@ nav.main
             color #1d173a
             font-size 16px
             font-weight 700
+            line-height 25px
             &.sc-selected
               top 10px
           + p
@@ -219,7 +243,7 @@ nav.main
         + p
           margin-top 20px
       .cordinate
-        padding 10px
+        padding 50px 10px
         text-transform uppercase
         float left
         width 50%
@@ -262,6 +286,12 @@ nav.main
         margin-right 20px
         a
           color #1d173a
+    .logos
+      margin-top 20px
+      img
+        margin-left 40px
+        &:first-child
+          margin-left 0
     .container 
       .easytabs-tab-content
         width 100%
