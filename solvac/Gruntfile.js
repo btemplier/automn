@@ -113,10 +113,10 @@ module.exports = function(grunt) {
         files: ['dev/stylus/*.styl'],
         tasks: ['stylus'],
       },
-      jshint: {
-        files: ['dev/*/*.js'],
-        tasks: ['jshint'],
-      },
+      //jshint: {
+        //files: ['dev/*/*.js'],
+        //tasks: ['jshint'],
+      //},
       copy: {
         files: ['dev/*/*.*'],
         tasks: ['copy'],
@@ -143,7 +143,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-stylus');
 
   // Default task(s).
-  grunt.registerTask('default', ['clean', 'jshint', 'shell', 'stylus', 'jade', 'copy', 'watch']);
+  grunt.registerTask('default', ['clean', 'shell', 'stylus', 'jade', 'copy', 'watch']);
   grunt.registerTask('prod', ['stylus', 'jade', 'copy', 'uglify', 'watch']);
 
 };

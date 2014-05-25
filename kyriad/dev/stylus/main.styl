@@ -21,9 +21,8 @@ h1, h2, h3, h4, header
 
 /* NAV */
 body
-  background url('../images/bg.png') repeat
+  background url('../images/bg-home.png') repeat
   box-shadow inset 0px 0px 50px 0px #242247
-  height 100%
   width 100%
   position absolute
   &.concours
@@ -31,26 +30,33 @@ body
     &.dotations
       background #282830
       padding 0
+.wrapper
+  border 1px solid #e3cd77
+  border-radius 3px
+  height 100%
+  width auto
+  box-sizing border-box
+  margin 8px
 h1
   background url('../images/logo-kyriad.png') no-repeat
   text-indent -9999em
   width 213px
   height 97px
-  margin 10px auto 10px auto
+  margin 20px auto 10px auto
 h2
   background url('../images/h2.png') no-repeat
   background-size 272px
   text-indent -9999em
   width 272px
   height 54px
-  margin 0 auto 5px auto
+  margin 20px auto 5px auto
 h3
-  background url('../images/h3.png') no-repeat
+  background url('../images/chaque-jour.png') no-repeat
   background-size 245px
   text-indent -9999em
-  width 245px
-  height 17px
-  margin 0 auto 10px auto
+  width 244px
+  height 50px
+  margin 5px auto 10px auto
 hr
   border-color #aaa9b7
   height 1px
@@ -89,33 +95,36 @@ h5
 ul
   clearfix()
   margin 0 auto
-  width 300px
+  width 90%
   li
     clearfix()
     float left
     box-sizing border-box
     margin-right 5%
+    text-align center
     .tablette
       background url('../images/txt-tablette.png')
-      background-size  97px
-      width 97px
-      height 49px
+      background-size  116px
+      width 116px
+      height 35px
       text-indent -9999em
-      margin-top 5px
+      margin 5px auto 0 auto
+      display block
     .nuits
       background url('../images/txt-nuits.png')  
-      background-size  68px
-      width 68px
-      height 29px
+      background-size 125px
+      width 125px
+      height 55px
       text-indent -9999em
-      margin 5px 0 0 5px
-    div, span, img
-      float left
+      margin 5px auto 0 auto
+      display block
     .btn
       background #d0c8b8
       border-radius 20px
       color #2d2d2d
       padding 10px
+      margin 5px 0 13px 15px
+      display inline-block
     &:last-child
       margin-top 10px
 nav
@@ -186,8 +195,9 @@ nav
     border-bottom 1px solid #FFF
     h2
       background url('../images/h2-jouer.png') no-repeat
-      height: 61px;
-      width: 299px;
+      height 61px
+      width 299px
+      margin 5px auto 10px auto
     span.triangle
       width 0px
       height 0px
@@ -288,16 +298,23 @@ nav
     padding 26px 0 40px 0
     li:last-child
       margin-right: 0px;
-
+.mentions
+  font-size 8px
+  padding 0 5px
+  text-align center
 @media (-webkit-min-device-pixel-ratio: 2)
   body
-    background url('../images/hd/bg.jpg') repeat
+    background url('../images/hd/bg-home.png') repeat
     background-size 100%
+  .wrapper 
+    height 540px
   h1
     background url('../images/hd/logo-kyriad.png') no-repeat
     background-size 107px
     width 107px
     height 49px
+  .button
+    margin 190px auto 0 auto
   .concours
     header
       background url('../images/hd/bg-concours.jpg') no-repeat
@@ -329,4 +346,10 @@ nav
       background-size 265px
       width 265px
       height 33px
-    
+  ul li 
+    .tablette
+      background url('../images/hd/txt-tablette.png')
+      background-size  100%
+    .nuits
+      background url('../images/hd/txt-nuits.png')  
+      background-size 100%

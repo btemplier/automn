@@ -2,6 +2,7 @@
 @import "variables.styl"
 @import "fonts.styl"
 @import "reset.styl"
+@import "default_skin.styl"
 global-reset()
 html
   font-size 20px
@@ -11,7 +12,7 @@ html
     height 100%
     .wrapper
       height 100%
-      padding-top 170px
+      padding-top 70px
       background-image url('../images/bg.jpg')
       background-repeat no-repeat
       background-size cover
@@ -41,6 +42,10 @@ html
           width 160px
           margin-right 20px
           font-size 12px
+          transition all .5s
+          &:hover
+            width 200px
+            transition all .5s
           &:nth-child(1)
             top -425px
             left -260px
@@ -60,10 +65,17 @@ html
             border-top 3px solid #f7a11e
             padding-top 15px
             display block
-        
+            &:hover
+              opacity 1
+          
 a
   text-decoration none
   color white
+  opacity 1
+  transition all .5s
+  &:hover
+    opacity .5
+    transition all .5s
 h1, h2, h3, h4, header
   color #FFF
   font-family 'interstateregular', sans-serif
@@ -92,9 +104,12 @@ nav.main
       color #FFF
       display inline-block
       width 160px
-      padding-top 15px
       margin-right 20px
       font-size 12px
+      a
+        padding-top 15px
+        display inline-block
+        width 100%
       &:first-child
         border-top 0
         background url('../images/logo.png') no-repeat center center
@@ -119,6 +134,11 @@ nav.main
     top 60px
     min-height 600px
     background #FFF
+    &.contact 
+      top 0px
+      .container
+        margin 0px auto 200px auto
+        padding 0 0 50px 0
     .container
       width 980px
       margin 200px auto 200px auto
@@ -139,12 +159,24 @@ nav.main
           font-size 13px
         h5
           font-size 11px
+      &.right
+        background url('../images/picto-arrow.png') no-repeat center left
+        padding-left  150px
+        background-size 130px
+        aside
+          background none
+          float right
       .easytabs-tab-content .content + aside
         background url('../images/picto-arrow-right.png') no-repeat top center
+       ul.tabs li
+          display inline
+          &.active
+            a
+              color #f49120 
       .content
         width 70%
         float left
-        ul 
+        ul
           li
             font-family: 'dinbold', sans-serif;
             list-style-type square
@@ -152,16 +184,16 @@ nav.main
             color #1d173a
             font-size 16px
             font-weight 700
+            &.sc-selected
+              top 10px
           + p
             margin-top 20px
-          &.tabs li
-            display inline
-            a
-              color #1d173a
-            &.active
-              a
-                color #f49120
-
+          h4, h5
+            color:#000
+          a
+            color #1d173a
+            img
+              margin 0 auto
         h2
           display block
           height 75px
@@ -186,6 +218,32 @@ nav.main
           color #0a1538
         + p
           margin-top 20px
+      .cordinate
+        padding 10px
+        text-transform uppercase
+        float left
+        width 50%
+        height 180px
+        h3
+          color #0a1538
+          margin-bottom 10px
+          font-weight 700
+          
+      .mailto
+        float left
+        display table
+        width 50%
+        li
+          display table-cell
+          vertical-align middle
+          color #FFF
+          text-transform uppercase
+          text-align center
+          height 180px
+          width 33.3%
+          background-linear-gradient(to bottom, #fac34b, 0%,#f59334, 100%)
+          &:nth-child(2)
+            background-linear-gradient(to top, #fac34b, 0%,#f59334, 100%)
     .tabs
       width 1024px
       margin auto
@@ -208,8 +266,12 @@ nav.main
       .easytabs-tab-content
         width 100%
     #slides
+      display none
       overflow visible
       .slides
         color #000
       .slidesjs-navigation
         color #000
+  #map
+    width 100%
+    height 400px

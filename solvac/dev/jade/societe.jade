@@ -3,12 +3,20 @@ extends layout/layout
 block content
   script(type='text/javascript' charset='utf-8')
     | $(document).ready(function() {
-    |   $("#slides").slidesjs({
-    |     width: 400,
-    |     height: 150,
-    |     pagination: {
-    |       active: false
-    |     }
+    |   $('.sky-carousel').carousel({
+    |     itemWidth: 205,
+    |     itemHeight: 280,
+    |     distance: 25,
+    |     selectedItemDistance: 35,
+    |     selectedItemZoomFactor: 0.9,
+    |     unselectedItemZoomFactor: 0.6,
+    |     unselectedItemAlpha: 0.6,
+    |     motionStartDistance: 140,
+    |     topMargin: 30,
+    |     gradientStartPoint: 0.36,
+    |     gradientOverlayColor: "#FFF",
+    |     gradientOverlaySize: 190,
+    |     selectByClick: true
     |   });
     |   $('#contentTabs').easyTabs({defaultContent:1});
     | });
@@ -37,49 +45,51 @@ block content
         div(id='organigramme')
           div(class="content")
             h3 Trombinoscope
-            div(id="slides")
-              div
-                img(src='images/trombi/fouche.png' alt='nathalie douay')
-                h4 Nathalie Douay
-                h5 Assistante de direction
-                a(href='mailto:test@solvac.fr')
-                  img(src='images/mailto.png') 
-              div
-                img(src='images/trombi/fouche.png' alt='nathalie douay')
-                h4 Laurent Boulenger
-                h5 Chargé d'affaires maintenance
-                a(href='mailto:test@solvac.fr')
-                  img(src='images/mailto.png') 
-              div
-                img(src='images/trombi/fouche.png' alt='nathalie douay')
-                h4 Marc Lacaze
-                h5 Responsable maintenance
-                a(href='mailto:test@solvac.fr')
-                  img(src='images/mailto.png') 
-              div
-                img(src='images/trombi/fouche.png' alt='nathalie douay')
-                h4 Pierre-Gilles Amiot
-                h5 Président
-                a(href='mailto:test@solvac.fr')
-                  img(src='images/mailto.png')
-              div
-                img(src='images/trombi/fouche.png' alt='nathalie douay')
-                h4 Marie-Emmanuelle Fouché
-                h5 Responsable travaux
-                a(href='mailto:test@solvac.fr')
-                  img(src='images/mailto.png')
-              div
-                img(src='images/trombi/fouche.png' alt='nathalie douay')
-                h4 Matthieu Thibout
-                h5 Technicien d'études
-                a(href='mailto:test@solvac.fr')
-                  img(src='images/mailto.png')
-              div
-                img(src='images/trombi/fouche.png' alt='nathalie douay')
-                h4 Renée Rault
-                h5 Comptable
-                a(href='mailto:test@solvac.fr')
-                  img(src='images/mailto.png')
+            div(class="sky-carousel")
+              div(class="sky-carousel-wrapper")
+                ul(class="sky-carousel-container")
+                  li
+                    img(src='images/trombi/douay.png' alt='nathalie douay')
+                    h4 Nathalie Douay
+                    h5 Assistante de direction
+                    a(href='mailto:test@solvac.fr')
+                      img(src='images/mailto.png') 
+                  li
+                    img(src='images/trombi/boulenger.png' alt='nathalie douay')
+                    h4 Laurent Boulenger
+                    h5 Chargé d'affaires maintenance
+                    a(href='mailto:test@solvac.fr')
+                      img(src='images/mailto.png') 
+                  li
+                    img(src='images/trombi/lacaze.png' alt='nathalie douay')
+                    h4 Marc Lacaze
+                    h5 Responsable maintenance
+                    a(href='mailto:test@solvac.fr')
+                      img(src='images/mailto.png') 
+                  li
+                    img(src='images/trombi/amiot.png' alt='nathalie douay')
+                    h4 Pierre-Gilles Amiot
+                    h5 Président
+                    a(href='mailto:test@solvac.fr')
+                      img(src='images/mailto.png')
+                  li
+                    img(src='images/trombi/fouche.png' alt='nathalie douay')
+                    h4 Marie-Emmanuelle Fouché
+                    h5 Responsable travaux
+                    a(href='mailto:test@solvac.fr')
+                      img(src='images/mailto.png')
+                  li
+                    img(src='images/trombi/thibout.png' alt='nathalie douay')
+                    h4 Matthieu Thibout
+                    h5 Technicien d'études
+                    a(href='mailto:test@solvac.fr')
+                      img(src='images/mailto.png')
+                  li
+                    img(src='images/trombi/rault.png' alt='nathalie douay')
+                    h4 Renée Rault
+                    h5 Comptable
+                    a(href='mailto:test@solvac.fr')
+                      img(src='images/mailto.png')
         div(id='histoire')
           aside
           div(class="content")
