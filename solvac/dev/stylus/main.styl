@@ -59,7 +59,7 @@ html
             top -210px
             left 410px
           &:nth-child(5)
-            top -10px
+            top -40px
             left -0px
           a
             border-top 3px solid #f7a11e
@@ -158,6 +158,7 @@ body.travaux
     &.contact 
       top 0px
       .container
+        width 100%
         margin 0px auto 200px auto
         padding 0 0 50px 0
     .container
@@ -243,21 +244,25 @@ body.travaux
         + p
           margin-top 20px
       .cordinate
-        padding 50px 10px
+        padding 50px 10px 50px 150px
         text-transform uppercase
-        float left
+        float right
         width 50%
         height 180px
         h3
           color #0a1538
           margin-bottom 10px
           font-weight 700
+          font-family 'dinbold', sans-serif
+        p
+          font-family 'dinbold', sans-serif
           
       .mailto
-        float left
+        float right
         display table
         width 50%
         li
+          font-family 'dinbold', sans-serif
           display table-cell
           vertical-align middle
           color #FFF
@@ -265,9 +270,24 @@ body.travaux
           text-align center
           height 180px
           width 33.3%
+          position relative
           background-linear-gradient(to bottom, #fac34b, 0%,#f59334, 100%)
           &:nth-child(2)
             background-linear-gradient(to top, #fac34b, 0%,#f59334, 100%)
+          .mask
+            opacity 0
+            transition all 1s
+            background #272627
+            padding 85px 0
+            display block
+            height 180px
+            font-size 13px
+            position absolute
+            top -1px
+            width 100%
+            text-align center
+            &:hover
+              opacity 1
     .tabs
       width 1024px
       margin auto
@@ -288,7 +308,7 @@ body.travaux
           color #1d173a
     .logos
       margin-top 20px
-      img
+      a
         margin-left 40px
         &:first-child
           margin-left 0
