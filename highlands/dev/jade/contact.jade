@@ -1,0 +1,17 @@
+block vars
+  - var pageTitle = 'contact'
+extends layout/layout
+block content
+  div(id="map")
+  section(class="wrapper contact")
+    div(class="container")
+      div(class="cordinate")
+        div(class='mailto')
+          a(href='mailto:test@highlans.fr')
+            img(src='images/hand-contact.jpg')
+        div
+          img(src='images/logo-sm.png' alt='')
+          p 414, RUE SAINT-HONORÉ - BP 192-08 - 75363 PARIS cedex 08
+            br
+            | Tél. : +33 (0)1 42 96 06 16        Fax : +33 (0)1 42 60 32 50
+  script(type="text/javascript" src="js/google-map.js")

@@ -1,0 +1,228 @@
+@import "mixins.styl"
+@import "variables.styl"
+@import "fonts.styl"
+@import "reset.styl"
+global-reset()
+html
+  font-size 20px
+  font-weight 100
+  height 100%
+  background #eee
+  body.home
+    height 1000px
+    background #eee
+    .wrapper
+      height 100%
+      padding-top 260px
+      background-image url('../images/bg-home.jpg')
+      background-repeat no-repeat
+      background-color #e5e5e5
+      width 980px
+      margin 0 auto
+      color #CCC
+      background-position 50% 50%
+      box-shadow(0px 0px 20px 0px #CCC)
+      h1
+        margin 0 auto 75px auto
+        background-image url('../images/logo-home.png')
+        width 540px
+        height 130px
+        text-indent -9999em
+      h2
+        margin 0 auto
+        width 540px
+        font-size 80px
+        text-align  center
+        letter-spacing 10px
+        font-size 60px
+        line-height 65px
+      ul
+        width 160px
+        margin 0 auto
+        li
+          position relative
+          background url('../images/bullet-menu.png') no-repeat top center
+          font-family 'blairmditc_ttregular', sans-serif
+          text-align left
+          text-transform uppercase
+          display inline-block
+          width auto
+          margin-right 20px
+          vertical-align top
+          white-space nowrap
+          transition all .5s
+          &:hover
+            opacity(0.5)
+          &:nth-child(1)
+            top -400px
+            left -350px
+          &:nth-child(2)
+            top -75px
+            left -250px
+          &:nth-child(3)
+            top -510px
+            left 280px
+          &:nth-child(4)
+            top -240px
+            left 280px
+          a
+            color #000
+            padding-top 50px
+            display block
+            font-size 12px
+            letter-spacing 1px
+            &:hover
+              opacity .5
+          
+a
+  text-decoration none
+  color white
+  opacity 1
+  transition all .5s
+  &:hover
+    opacity .5
+    transition all .5s
+h1, h2, h3, h4, header
+  color #FFF
+*
+  box-sizing border-box
+
+/* NAV */
+nav.main
+  width 100%
+  background #EEE
+  ul
+    box-shadow(0px 0px 20px 0px #CCC)
+    background #e5e5e5
+    padding 10px 20px
+    clearfix()
+    width 980px
+    margin auto
+    li
+      background url('../images/bullet-menu.png') no-repeat top center
+      font-family 'blairmditc_ttregular', sans-serif
+      text-align left
+      text-transform uppercase
+      display inline-block
+      width auto
+      margin-right 20px
+      vertical-align top
+      &:hover
+        opacity(0.5)
+        transition all .5s
+      &:nth-child(1), &:nth-child(3)
+        margin-top 0px 
+      &:nth-child(2), &:nth-child(4)
+        margin-top 20px
+      a
+        color #000
+        padding-top 50px
+        display inline-block
+        width 100%
+        font-size 10px
+        letter-spacing 1px
+body.societe 
+  .content
+    background url('../images/bg-eponge.jpg') bottom right
+    background-repeat no-repeat
+    h2
+      letter-spacing 5.5px!important
+    .center
+      margin-top 200px
+  nav ul li:nth-child(1) a
+    color #999
+body.services
+  .content
+    background-image url('../images/bg-brumi.jpg')
+    background-position 600px 30px
+    background-repeat no-repeat
+    h2
+      letter-spacing 4.65px!important
+    .center
+      margin-top 50px
+  nav ul li:nth-child(2) a
+    color #999
+  
+body.atouts
+  .content
+    background-image url('../images/bg-gants.jpg')
+    background-position bottom right
+    background-repeat no-repeat
+  nav ul li:nth-child(3) a
+    color #999
+body.contact
+  background #EEE
+  nav ul li:nth-child(4) a
+    color #999
+.others
+  h1, h2
+    display none
+  .wrapper
+    width 100%
+    background #EE
+    .container
+      .content
+        box-shadow(0px 0px 20px 0px #CCC)
+        background-color #e5e5e5
+        padding-top 50px
+        padding-right 320px
+        padding-left 20px
+        width 980px
+        min-height 825px
+        margin 0 auto
+        ul
+          li
+            background url('../images/little-bullet.jpg') no-repeat
+            letter-spacing 1px
+            color #1d173a
+            font-size 8px
+            font-family 'blairmditc_ttregular', sans-serif
+            text-align justify
+            margin-bottom 10px
+            padding-left 30px
+            line-height 25px
+            width 520px
+        h2
+          font-family 'StoneSerifLT', sans-serif
+          display block
+          color #000
+          font-size 21px
+          text-transform uppercase
+          color #1d173a
+          width 520px
+          margin-bottom 20px
+        p
+          font-family 'blairmditc_ttregular', sans-serif
+          font-size 8px
+          letter-spacing 1px
+          color #0a1538      
+          line-height 25px
+          text-align justify
+          color #0a1538
+          width 520px
+          margin-bottom 20px
+        .center
+          text-align center
+          width 520px
+      .cordinate
+        box-shadow(0px 0px 20px 0px #CCC)
+        width 980px
+        margin 0 auto
+        background-color #e5e5e5
+        min-height 400px
+        padding-top 20px
+        font-family 'blairmditc_ttregular', sans-serif
+        font-size 12px
+        .mailto
+          float left
+          width 250px
+          margin-top 15px
+        p
+          line-height 20px
+          padding-left 10px
+  #map
+    box-shadow(0px 0px 20px 0px #CCC)
+    width 980px
+    height 400px
+    margin 0 auto
+    background #EEE
