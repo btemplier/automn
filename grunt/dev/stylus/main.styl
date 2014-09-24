@@ -1,0 +1,364 @@
+@import "mixins.styl"
+@import "variables.styl"
+@import "fonts.styl"
+@import "reset.styl"
+global-reset()
+html
+  
+
+/* Main css */
+html
+  width 100%
+  height 100%
+body
+  width 1920px
+  height 1080px
+  overflow hidden
+  background-image url('../images/bg.jpg')
+  background-size cover
+  .retour, .credits
+    background url('../images/bg-accueil.png') no-repeat
+    width 122px
+    height 93px
+    cursor pointer
+    color #647b9a
+    &:hover
+      background url('../images/bg-accueil_on.png') no-repeat
+      color #3c466b
+  .retour
+    font-style italic
+    position absolute
+    left 80px
+    top 0px
+    text-align center
+    span
+      text-shadow(1px 1px #FFF)
+    img
+      display block
+      margin 10px 30px
+  .credits
+    position absolute
+    padding-top 30px
+    right 80px
+    top -10px
+    text-align center
+    img
+      vertical-align middle
+      opacity .7
+    span
+      vertical-align middle
+      margin-left 15px
+    &:hover img
+      opacity 1
+  .logo_cofely
+    bottom 20px
+    right 90px
+    position absolute
+  .debut_profil
+    position absolute
+    display block
+    width 50px
+    height 52px
+    content ''
+    background url('../images/bt_debut_profil.png')
+    cursor pointer
+    left 100px
+    bottom 100px
+    opacity .7
+    text-indent -999em
+    &:hover
+      opacity 1
+  .home_profil
+    position absolute
+    display block
+    width 65px
+    height 64px
+    content ''
+    background url('../images/bt_changement_profil.png') no-repeat center center
+    cursor pointer
+    right 100px
+    bottom 100px
+    text-indent -999em
+    &:hover
+      background url('../images/bt_changement_profil_on.png') no-repeat center center
+.content
+  margin auto
+  padding 0px
+  width 1920px
+  height: 1080px;
+
+.slick-slide img 
+  display: block;
+  padding: 0;
+  margin 160px;
+  //width 90%
+/* TIMELINE */
+.slick-dots
+  text-align center
+  position relative
+  top -150px
+  width 1500px
+  margin 0 auto
+  li
+    margin-top 20px
+    border-color #7b8099
+    border-style solid
+    border-width 3px 0 0 0
+    padding-right 5px
+    position: relative
+    box-sizing border-box
+    /*border-bottom 3px solid #7b8099*/
+    display inline-block
+    &.first
+      border-color #43b04e
+      width 3.333%
+    &.second
+      border-color #ed980d
+      width 5%
+    &.third
+      border-color #e2344e
+      width 3.333%
+    &.fourth
+      border-color #b4007d
+      width 6.666%
+    &.fifth
+      border-color #20768e 
+      width 9%
+    &.slick-active, &.slick-active ~ li
+      border-style dotted
+      border-color #808080
+    .slick-dots li.first.slick-active span, .slick-dots li.first.slick-active ~ li span
+      border-color grey
+    &:last-child
+      border 0
+      width 25px
+    // Couleur 1ere etape 
+    &.first span
+      border-color: #afd88a;
+    &.first.slick-active ~li span
+      border-color #d3dade
+    // Couleur 2eme etape
+    &.second span
+      border-color: #ed980d;
+    &.second.slick-active ~li span
+      border-color #d3dade
+    // Couleur 3eme etape
+    &.third span
+      border-color: #e2344e ;
+    &.third.slick-active ~li span
+      border-color #d3dade
+    // Couleur 4eme etape
+    &.fourth span
+      border-color: #b4007d ;
+    &.fourth.slick-active ~li span
+      border-color #d3dade
+    // Couleur 5eme etape
+    &.fifth span
+      border-color: #20768e
+    &.fifth.slick-active ~li span
+      border-color #d3dade
+
+    &.break
+      &.first 
+        span
+          border-color #50ac53!important
+        button
+          border-color #afd88a
+      &.second 
+        span
+          border-color #ed980d!important
+        button
+          border-color #f9e0b6
+      &.third 
+        span
+          border-color #e2344e!important
+        button
+          border-color #f6c1c9
+      &.fourth 
+        span
+          border-color #b4007d!important
+        button
+          border-color #f6c1c9    
+      &.fifth 
+        span
+          border-color #20768e!important
+        button
+          border-color #9edddb
+    button
+      border-width 5px
+      border-style solid
+      border-color transparent
+      border-radius 20px
+      width 26px
+      height 26px
+      display block
+      position relative
+      text-indent -9999em
+      background transparent
+      cursor pointer
+      top: -14px
+      left -10px
+      &:focus
+        outline: transparent
+    ~ li
+      border-color grey
+    span
+      background #FFF
+      position absolute
+      border-width 4px
+      border-style solid
+      border-color #d4dbdf
+      border-radius 7px
+      float left
+      text-indent -9999em
+      width 16px
+      height 16px
+      box-sizing border-box
+      transition all .5s
+      left -5px
+      top -9px
+      z-index 0
+      cursor pointer
+      &:hover
+        box-shadow 0px 0px 30px #111
+        transition all .2s
+  
+/* FIN TIMELINE */
+
+
+
+/* SLIDER */
+.slick-slider
+  position relative
+  display block
+  box-sizing border-box
+  -moz-box-sizing border-box
+  -webkit-touch-callout none
+  -webkit-user-select none
+  -khtml-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  user-select none
+  -ms-touch-action none
+  -webkit-tap-highlight-color transparent 
+
+.slick-list
+  position relative
+  overflow hidden
+  display block
+  margin 0
+  padding 0
+  &:focus
+    outline none
+  .dragging
+    cursor pointer
+    cursor hand 
+.slick-loading .slick-list
+  background white url("./ajax-loader.gif") center center no-repeat
+
+.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img
+  -webkit-transform translate3d(0, 0, 0)
+  -moz-transform translate3d(0, 0, 0)
+  -ms-transform translate3d(0, 0, 0)
+  -o-transform translate3d(0, 0, 0)
+  transform translate3d(0, 0, 0) 
+
+.slick-track
+  position relative
+  left 0
+  top 0
+  display block
+  zoom 1
+  &:before, &:after
+    content ""
+    display table
+  &:after
+    clear both
+
+.slick-loading .slick-track
+  visibility hidden 
+
+.slick-slide
+  float left
+  height 100%
+  min-height 1px
+  display none
+.slick-slide.slick-loading img
+  display none 
+.slick-slide.dragging img
+  pointer-events none 
+.slick-initialized .slick-slide
+  display block 
+.slick-loading .slick-slide
+  visibility hidden 
+.slick-vertical .slick-slide
+  display block
+  height auto
+  border 1px solid transparent
+
+/* Icons */
+@font-face
+  font-family "slick"
+  src url("./fonts/slick.eot")
+  src url("./fonts/slick.eot?#iefix") format("embedded-opentype"), 
+       url("./fonts/slick.woff") format("woff"), 
+       url("./fonts/slick.ttf") format("truetype"), 
+       url("./fonts/slick.svg#slick") format("svg")
+  font-weight normal
+  font-style normal 
+/* Arrows */
+.slick-prev, .slick-next
+  position absolute
+  display block
+  height 100%
+  line-height 0
+  font-size 0
+  cursor pointer
+  opacity .3
+  color transparent
+  min-height: 1080px;
+  top 0px
+  width 65px
+  padding 0
+  border none
+  outline none 
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus
+  outline none
+  color transparent
+  opacity .4
+.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before
+  opacity 1 
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before
+  opacity 0.25 
+
+.slick-prev:before, .slick-next:before
+  background #003882
+  min-height: 1080px;
+  height 100%
+  width 56px
+  left 11px
+  position relative
+  opacity .66
+  display block
+  -webkit-font-smoothing antialiased
+  moz-osx-font-smoothing grayscale
+
+.slick-prev
+  left 0px
+  background url(../images/bg_prev.png) no-repeat center center
+.slick-prev:before
+  content "\2190"
+  background url(../images/arrow_prev.png) no-repeat center center
+  left -2px
+  position relative
+
+.slick-next  
+  right 0px
+  background url(../images/bg_next.png) no-repeat center center
+.slick-next:before
+  content "\2192" 
+  background url(../images/arrow_next.png) no-repeat center center
+
+/* Dots */
+.slick-slider
+  margin-bottom 0px

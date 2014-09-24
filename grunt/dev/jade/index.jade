@@ -1,0 +1,94 @@
+doctype html
+html
+  head
+    title [ Cofely ]
+    link(rel="stylesheet", href="css/main.css", type="text/css")
+    script(type="text/javascript" src="js/vendors/jquery/dist/jquery.min.js")
+    script(type="text/javascript" src="js/slick.js")
+    meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(type="text/javascript")
+      |  $(document).ready(function(){
+      |    function title() {
+      |      //
+      |    } 
+      |    $('.mySlide').slick({
+      |      dots: true,
+      |      infinite: false,
+      |      lazyLoad: 'ondemand',
+      |      slidesToShow: 1,
+      |      slidesToScroll: 1,
+      |      onAfterChange : function(index){
+      |       title();
+      |      }
+      |    });
+      |    $('li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5), li:nth-child(6)').addClass('first');
+      |    $('li:nth-child(7), li:nth-child(8), li:nth-child(9), li:nth-child(10)').addClass('second');
+      |    $('li:nth-child(11), li:nth-child(12), li:nth-child(13), li:nth-child(14), li:nth-child(15), li:nth-child(16)').addClass('third'); 
+      |    $('li:nth-child(17), li:nth-child(18), li:nth-child(19)').addClass('fourth');
+      |    $('li:nth-child(20), li:nth-child(21), li:nth-child(22)').addClass('fifth');    
+      |    $('li:nth-child(1), li:nth-child(7), li:nth-child(11), li:nth-child(17), li:nth-child(20)').addClass('break');
+      |    //$('.slick-dots').prepend('<div class="TEST"></div>');
+      |  });
+  body()
+    div(id="wrapper")
+      div(class="mySlide content")
+        div
+          img(data-lazy="images/profil_1/P1_E1_01_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E1_02_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E1_03_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E1_04_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E1_05_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E1_06_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E2_01_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E2_02_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E2_03_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E2_04_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E3_01_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E3_02_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E3_03_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E3_04_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E3_05_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E3_06_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E4_01_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E4_02_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E4_03_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E5_01_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E5_02_T.png")
+        div
+          img(data-lazy="images/profil_1/P1_E5_03_T.png")
+      div(class="btns")
+        div(class="retour")
+        div(class="retour")
+          img(src="images/logo_showroom.png")
+          span Accueil
+        div(class="credits")
+          img(src="images/picto_credit.png")
+          span Crédits
+        div(class="logo_cofely")
+          img(src="images/logo_cofely.png")
+        div(class="debut_profil")
+          span Accueil
+        div(class="home_profil")
+          span retour
+            

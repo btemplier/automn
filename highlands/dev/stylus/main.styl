@@ -50,9 +50,10 @@ html
           margin-right 20px
           vertical-align top
           white-space nowrap
-          transition all .5s
+          transition all 0s
           &:hover
-            opacity(0.5)
+            background-position center -66px
+            transition all 0s
           &:nth-child(1)
             top -400px
             left -350px
@@ -107,9 +108,15 @@ nav.main
       width auto
       margin-right 20px
       vertical-align top
+      &:first-child
+        background none
+        a
+          padding-top 15px
+          img
+            height 70px  
       &:hover
-        opacity(0.5)
-        transition all .5s
+        background-position center -66px
+        transition all 0s
       &:nth-child(1), &:nth-child(3)
         margin-top 0px 
       &:nth-child(2), &:nth-child(4)
@@ -129,8 +136,10 @@ body.societe
       letter-spacing 5.5px!important
     .center
       margin-top 200px
-  nav ul li:nth-child(1) a
-    color #999
+  nav ul li:nth-child(2)
+      background-position center -66px
+      a
+        color #999
 body.services
   .content
     background-image url('../images/bg-brumi.jpg')
@@ -140,20 +149,26 @@ body.services
       letter-spacing 4.65px!important
     .center
       margin-top 50px
-  nav ul li:nth-child(2) a
-    color #999
+  nav ul li:nth-child(3)
+      background-position center -66px
+      a
+        color #999
   
 body.atouts
   .content
     background-image url('../images/bg-gants.jpg')
     background-position bottom right
     background-repeat no-repeat
-  nav ul li:nth-child(3) a
-    color #999
+  nav ul li:nth-child(4)
+    background-position center -66px
+    a
+      color #999
 body.contact
   background #EEE
-  nav ul li:nth-child(4) a
-    color #999
+  nav ul li:nth-child(5)
+      background-position center -66px
+      a
+        color #999
 .others
   h1, h2
     display none
@@ -217,6 +232,21 @@ body.contact
           float left
           width 250px
           margin-top 15px
+          img
+            float left
+          a
+            background url(../images/bullet-mail.png)
+            width 33px
+            height 33px
+            display block
+            transition all 0s
+            float left
+            margin-top 25px
+            margin-left 5px
+            &:hover
+              opacity(1)
+              background-position 0 -33px
+              transition all 0s
         p
           line-height 20px
           padding-left 10px

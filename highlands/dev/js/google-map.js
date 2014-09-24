@@ -10,11 +10,7 @@ window.onload = function() {
         styles: [ 
         {
             "stylers": [
-              { "hue": "#003bff" },
-              { "invert_lightness": true },
-              { "lightness": 10 },
-              { "gamma": 0.91 },
-              { "saturation": -60 }
+              { "hue": "#078bcd" }
             ]
         },{
             "featureType": "road.local",
