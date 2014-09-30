@@ -25,74 +25,94 @@ body
     &:hover
       background url('../images/bg-accueil_on.png') no-repeat
       color #3c466b
-  .retour
-    font-style italic
-    position absolute
-    left 80px
-    top 0px
-    text-align center
-    span
-      text-shadow(1px 1px #FFF)
-    img
+  .btns
+    .retour
+      font-style italic
+      position absolute
+      left 80px
+      top 0px
+      text-align center
+      span
+        text-shadow(1px 1px #FFF)
+      img
+        display block
+        margin 10px 30px
+    .credits
+      position absolute
+      padding-top 30px
+      right 80px
+      top -10px
+      text-align center
+      img
+        vertical-align middle
+        opacity .7
+      span
+        vertical-align middle
+        margin-left 15px
+      &:hover img
+        opacity 1
+    .logo_cofely
+      bottom 20px
+      right 90px
+      position absolute
+    .debut_profil
+      position absolute
       display block
-      margin 10px 30px
-  .credits
-    position absolute
-    padding-top 30px
-    right 80px
-    top -10px
-    text-align center
-    img
-      vertical-align middle
+      width 50px
+      height 52px
+      content ''
+      background url('../images/bt_debut_profil.png')
+      cursor pointer
+      left 100px
+      bottom 100px
       opacity .7
-    span
-      vertical-align middle
-      margin-left 15px
-    &:hover img
-      opacity 1
-  .logo_cofely
-    bottom 20px
-    right 90px
-    position absolute
-  .debut_profil
-    position absolute
-    display block
-    width 50px
-    height 52px
-    content ''
-    background url('../images/bt_debut_profil.png')
-    cursor pointer
-    left 100px
-    bottom 100px
-    opacity .7
-    text-indent -999em
-    &:hover
-      opacity 1
-  .home_profil
-    position absolute
-    display block
-    width 65px
-    height 64px
-    content ''
-    background url('../images/bt_changement_profil.png') no-repeat center center
-    cursor pointer
-    right 100px
-    bottom 100px
-    text-indent -999em
-    &:hover
-      background url('../images/bt_changement_profil_on.png') no-repeat center center
+      text-indent -999em
+      &:hover
+        opacity 1
+    .home_profil
+      position absolute
+      display block
+      width 65px
+      height 64px
+      content ''
+      background url('../images/bt_changement_profil.png') no-repeat center center
+      cursor pointer
+      right 100px
+      bottom 100px
+      text-indent -999em
+      &:hover
+        background url('../images/bt_changement_profil_on.png') no-repeat center center
 .content
   margin auto
   padding 0px
   width 1920px
   height: 1080px;
+.slick-slide
+  position relative
+  .t1
+    margin 0
+    position absolute
+    opacity 1
+    transition(all 1s ease-out)
+  &:nth-child(1) .t1
+    left 1036px
+    top 160px
+  &:nth-child(7) .t1
+    left 755px
+    top 169px
+  &.hidden
+    opacity 0!important
+    transition(all 1s ease-out)
+  img 
+    display: block;
+    padding: 0;
+    margin 160px;
+    //width 90%
 
-.slick-slide img 
-  display: block;
-  padding: 0;
-  margin 160px;
-  //width 90%
+/*----------*/
 /* TIMELINE */
+/*----------*/
+
 .slick-dots
   text-align center
   position relative
@@ -135,28 +155,38 @@ body
     // Couleur 1ere etape 
     &.first span
       border-color: #afd88a;
+      background: #e1efcc;
     &.first.slick-active ~li span
       border-color #d3dade
+      background #FFF
     // Couleur 2eme etape
     &.second span
       border-color: #ed980d;
+      background #f9e0b6
     &.second.slick-active ~li span
       border-color #d3dade
+      background #FFF
     // Couleur 3eme etape
     &.third span
       border-color: #e2344e ;
+      background #f6c1c9
     &.third.slick-active ~li span
       border-color #d3dade
+      background #FFF
     // Couleur 4eme etape
     &.fourth span
-      border-color: #b4007d ;
+      border-color: #b4007d
+      background #cfbcd8
     &.fourth.slick-active ~li span
       border-color #d3dade
+      background #FFF
     // Couleur 5eme etape
     &.fifth span
       border-color: #20768e
+      background #9edddb
     &.fifth.slick-active ~li span
       border-color #d3dade
+      background #FFF
 
     &.break
       &.first 
@@ -184,6 +214,8 @@ body
           border-color #20768e!important
         button
           border-color #9edddb
+      span
+        background #FFF!important
     button
       border-width 5px
       border-style solid
