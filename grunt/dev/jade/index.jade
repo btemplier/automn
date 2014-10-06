@@ -5,47 +5,30 @@ html
     link(rel="stylesheet", href="css/main.css", type="text/css")
     script(type="text/javascript" src="js/vendors/jquery/dist/jquery.min.js")
     script(type="text/javascript" src="js/slick.js")
+    script(type="text/javascript" src="js/app.js")
     meta(http-equiv="content-type" content="text/html; charset=utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    script(type="text/javascript")
-      |  $(document).ready(function(){
-      |    $('.mySlide').slick({
-      |      dots: true,
-      |      infinite: false,
-      |      lazyLoad: 'ondemand',
-      |      slidesToShow: 1,
-      |      slidesToScroll: 1,
-      |      onAfterChange : function(index){
-      |       titleOn();
-      |      },
-      |      onBeforeChange : function(index){
-      |       titleDel();
-      |      }
-      |    });
-      |    function titleOn() {
-      |     $('.slick-active .t1').removeClass('hidden');
-      |     $('.slick-active .t1').css("opacity", "1");      
-      |    }
-      |    function titleDel() {
-      |     if($('.slick-active .t1')) {
-      |       $('.slick-active .t1').addClass('hidden');
-      |       $('.slick-active .t1').css("opacity", "0");      
-      |     };
-      |    }
-      |    $('li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5), li:nth-child(6)').addClass('first');
-      |    $('li:nth-child(7), li:nth-child(8), li:nth-child(9), li:nth-child(10)').addClass('second');
-      |    $('li:nth-child(11), li:nth-child(12), li:nth-child(13), li:nth-child(14), li:nth-child(15), li:nth-child(16)').addClass('third'); 
-      |    $('li:nth-child(17), li:nth-child(18), li:nth-child(19)').addClass('fourth');
-      |    $('li:nth-child(20), li:nth-child(21), li:nth-child(22)').addClass('fifth');    
-      |    $('li:nth-child(1), li:nth-child(7), li:nth-child(11), li:nth-child(17), li:nth-child(20)').addClass('break');
-      |    //$('.slick-dots').prepend('<div class="TEST"></div>');
-      |  });
   body()
     div(id="wrapper")
       div(class="mySlide content")
         div
+          img(src="images/profil_1/ET_0/P1_E0_0.png")
+          div(class="audioplayer")
+            img(src="images/audioplayer/play.png" class="play" data-audiosrc="media/p1_e0.mp3")
+            img(src="images/audioplayer/pause.png" class="pause")
+            img(src="images/audioplayer/mute.png" class="mute")
+          img(src="images/profil_1/ET_0/P1_E0_01_01.png" class="lk1")
+          img(src="images/profil_1/ET_0/P1_E0_01_02.png" class="lk2")
+          img(src="images/profil_1/ET_0/P1_E0_01_03.png" class="lk3")
+          img(src="images/profil_1/ET_0/P1_E0_01_04.png" class="lk4")
+          img(src="images/profil_1/ET_0/P1_E0_01_05.png" class="lk5")
+        div(data-label="9:00")
           img(data-lazy="images/profil_1/P1_E1_01_T-title.png" class="t1 hidden")
           img(data-lazy="images/profil_1/P1_E1_01_T.png")
+          div(class="audioplayer")
+            img(src="images/audioplayer/play.png" class="play" data-audiosrc="media/p1_e1.mp3")
+            img(src="images/audioplayer/pause.png" class="pause")
+            img(src="images/audioplayer/mute.png" class="mute")
         div
           img(data-lazy="images/profil_1/P1_E1_02_T.png")
         div
@@ -56,7 +39,7 @@ html
           img(data-lazy="images/profil_1/P1_E1_05_T.png")
         div
           img(data-lazy="images/profil_1/P1_E1_06_T.png")
-        div
+        div(data-label="11:00")
           img(data-lazy="images/profil_1/P1_E1_01_T-title.png" class="t1 hidden")          
           img(data-lazy="images/profil_1/P1_E2_01_T.png")
         div
@@ -65,7 +48,8 @@ html
           img(data-lazy="images/profil_1/P1_E2_03_T.png")
         div
           img(data-lazy="images/profil_1/P1_E2_04_T.png")
-        div
+        div(data-label="14:00")
+          img(data-lazy="images/profil_1/P1_E1_01_T-title.png" class="t1 hidden")
           img(data-lazy="images/profil_1/P1_E3_01_T.png")
         div
           img(data-lazy="images/profil_1/P1_E3_02_T.png")
@@ -77,13 +61,15 @@ html
           img(data-lazy="images/profil_1/P1_E3_05_T.png")
         div
           img(data-lazy="images/profil_1/P1_E3_06_T.png")
-        div
+        div(data-label="16:00")
+          img(data-lazy="images/profil_1/P1_E1_01_T-title.png" class="t1 hidden")
           img(data-lazy="images/profil_1/P1_E4_01_T.png")
         div
           img(data-lazy="images/profil_1/P1_E4_02_T.png")
         div
           img(data-lazy="images/profil_1/P1_E4_03_T.png")
-        div
+        div(data-label="18:00")
+          img(data-lazy="images/profil_1/P1_E1_01_T-title.png" class="t1 hidden")
           img(data-lazy="images/profil_1/P1_E5_01_T.png")
         div
           img(data-lazy="images/profil_1/P1_E5_02_T.png")
@@ -99,8 +85,8 @@ html
           span Crédits
         div(class="logo_cofely")
           img(src="images/logo_cofely.png")
-        div(class="debut_profil")
-          span Accueil
         div(class="home_profil")
           span retour
-            
+    div(id="audioplayer")
+      audio(preload="none")
+        source

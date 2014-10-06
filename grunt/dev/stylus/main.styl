@@ -16,13 +16,20 @@ body
   overflow hidden
   background-image url('../images/bg.jpg')
   background-size cover
+
+  .home
+    position: absolute;
+    left 160px
+    top 160px
+    z-index 10
   .retour, .credits
     background url('../images/bg-accueil.png') no-repeat
     width 122px
     height 93px
     cursor pointer
     color #647b9a
-    &:hover
+    &:hover,
+    &:focus
       background url('../images/bg-accueil_on.png') no-repeat
       color #3c466b
   .btns
@@ -49,7 +56,8 @@ body
       span
         vertical-align middle
         margin-left 15px
-      &:hover img
+      &:hover img,
+      &:focus img
         opacity 1
     .logo_cofely
       bottom 20px
@@ -67,7 +75,8 @@ body
       bottom 100px
       opacity .7
       text-indent -999em
-      &:hover
+      &:hover,
+      &:focus
         opacity 1
     .home_profil
       position absolute
@@ -80,7 +89,8 @@ body
       right 100px
       bottom 100px
       text-indent -999em
-      &:hover
+      &:hover,
+      &:focus
         background url('../images/bt_changement_profil_on.png') no-repeat center center
 .content
   margin auto
@@ -94,12 +104,21 @@ body
     position absolute
     opacity 1
     transition(all 1s ease-out)
-  &:nth-child(1) .t1
-    left 1036px
+  &:nth-child(2) .t1
+    left 962px
     top 160px
-  &:nth-child(7) .t1
-    left 755px
+  &:nth-child(8) .t1
+    left 681px
     top 169px
+  &:nth-child(12) .t1
+    left 922px
+    top 240px
+  &:nth-child(18) .t1
+    left: 661px;
+    top: 179px;
+  &:nth-child(21) .t1
+    left: 660px;
+    top: 159px;    
   &.hidden
     opacity 0!important
     transition(all 1s ease-out)
@@ -147,7 +166,15 @@ body
     &.slick-active, &.slick-active ~ li
       border-style dotted
       border-color #808080
-    .slick-dots li.first.slick-active span, .slick-dots li.first.slick-active ~ li span
+    &.slick-active ~li span
+      border-color #d3dade!important
+      background #FFF
+    &.slick-active ~li.break
+      span
+        border-color #7b8099!important
+      button
+        border-color #d3dade!important
+    .slick-dots li.slick-active span, .slick-dots li.slick-active ~ li span
       border-color grey
     &:last-child
       border 0
@@ -156,66 +183,83 @@ body
     &.first span
       border-color: #afd88a;
       background: #e1efcc;
-    &.first.slick-active ~li span
-      border-color #d3dade
-      background #FFF
     // Couleur 2eme etape
     &.second span
       border-color: #ed980d;
       background #f9e0b6
-    &.second.slick-active ~li span
-      border-color #d3dade
-      background #FFF
     // Couleur 3eme etape
     &.third span
       border-color: #e2344e ;
       background #f6c1c9
-    &.third.slick-active ~li span
-      border-color #d3dade
-      background #FFF
     // Couleur 4eme etape
     &.fourth span
       border-color: #b4007d
       background #cfbcd8
-    &.fourth.slick-active ~li span
-      border-color #d3dade
-      background #FFF
     // Couleur 5eme etape
     &.fifth span
       border-color: #20768e
       background #9edddb
-    &.fifth.slick-active ~li span
-      border-color #d3dade
-      background #FFF
 
     &.break
       &.first 
         span
-          border-color #50ac53!important
+          border-color #50ac53
         button
           border-color #afd88a
       &.second 
         span
-          border-color #ed980d!important
+          border-color #ed980d
         button
           border-color #f9e0b6
       &.third 
         span
-          border-color #e2344e!important
+          border-color #e2344e
         button
           border-color #f6c1c9
       &.fourth 
         span
-          border-color #b4007d!important
+          border-color #b4007d
         button
           border-color #f6c1c9    
       &.fifth 
         span
-          border-color #20768e!important
+          border-color #20768e
         button
           border-color #9edddb
       span
         background #FFF!important
+
+    &.profilhome
+      position absolute
+      display block
+      width 50px
+      height 52px
+      content ''
+      background url('../images/bt_debut_profil.png')
+      cursor pointer
+      left -110px
+      bottom 0px
+      border 0
+      opacity .7
+      text-indent -999em
+      &:hover,
+      &:focus
+        opacity 1
+      &.slick-active
+        opacity 1
+      span
+        width 100%
+        height 100%
+        border 0
+        border-radius 50%
+        left 0
+        background transparent
+        top 0
+        &:hover,
+        &:focus
+          box-shadow:0;
+
+
     button
       border-width 5px
       border-style solid
@@ -228,7 +272,7 @@ body
       text-indent -9999em
       background transparent
       cursor pointer
-      top: -14px
+      top -14px
       left -10px
       &:focus
         outline: transparent
@@ -251,9 +295,16 @@ body
       top -9px
       z-index 0
       cursor pointer
-      &:hover
+      &:hover,
+      &:focus
         box-shadow 0px 0px 30px #111
         transition all .2s
+
+    label
+      position absolute
+      width 200%
+      left -100%
+      padding-left 3px
   
 /* FIN TIMELINE */
 
@@ -315,6 +366,47 @@ body
   height 100%
   min-height 1px
   display none
+  &:nth-child(1)
+    [class^='lk']
+      position absolute
+      cursor pointer
+      margin 160px
+      &:hover
+        background-blend-mode:multiply
+    .lk1
+      top 0px
+      right 860px
+      background-color #d4c2a8
+    .lk2
+      top 0px
+      right 220px
+      background-color rgba(188,120,71,0.48)
+   .lk3
+      bottom 80px
+      right 720px
+      background-color rgba(63,63,141,0.33) 
+    .lk4
+      bottom 220px
+      right 300px
+      background-color rgba(63,63,141,0.40) 
+    .lk5
+      bottom 80px
+      right 0px
+      background-color rgba(63,134,141,0.50) 
+  .audioplayer
+    position absolute
+    top 415px
+    left 503px
+    img
+      margin 0px
+      display inline-block 
+      vertical-align middle
+      margin-right 12px
+      cursor pointer
+      &.mute
+        margin-left 11px
+  
+
 .slick-slide.slick-loading img
   display none 
 .slick-slide.dragging img

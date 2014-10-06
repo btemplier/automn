@@ -34,6 +34,14 @@ module.exports = function(grunt) {
           dest: 'public/images',
         }],
       },
+      media: {
+        files: [{
+          cwd: 'dev/media',
+          src: '**/*',
+          expand: true,
+          dest: 'public/media',
+        }],
+      },
       fonts: {
         files: [{
           cwd: 'dev/fonts',
