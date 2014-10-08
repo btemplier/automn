@@ -1,0 +1,30 @@
+@import "mixins.styl"
+@import "variables.styl"
+@import "fonts.styl"
+@import "reset.styl"
+global-reset()
+html
+	body
+		div.slideshow
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			overflow hidden
+			img
+				position absolute
+				transition:opacity 2s
+				opacity 0
+				&.current
+						opacity 1
+		div.logo
+			position absolute
+			img
+				position absolute
+				top 266px
+				left 677px
+				&#out
+					display none
+
+
