@@ -2,8 +2,9 @@ var radix = 10;
 var logoindex = 0;
 var logomax= 91
 function animateImage() {
+	//console.log('animateImage');
 	$("img.animated").each(function (Index) {
-		if (!$(this).is(":visible")) {
+		if (0 && !$(this).is(":visible")) {
 			var intervalID = parseInt($(this).attr("intervalid"),radix);
 			clearInterval(intervalID);
 		} else {
@@ -11,17 +12,18 @@ function animateImage() {
 			var pattern = $(this).attr("pattern");
 			var index = parseInt($(this).attr("index"),radix);
 			index++;
-			if (index > max) {
-				var intervalID = parseInt($(this).attr("intervalid"),radix);
-				clearInterval(intervalID);
-				$(this).removeClass('animated');
-				$(this).trigger('animationFinished');
-				index = 0;
-			}
 			index = ('00000' + index).substr(-5); 
 			var src = pattern.replace("#", index);
 			$(this).attr("index", index);
 			$(this).attr("src", src);
+			if (index == max) {
+				var intervalID = parseInt($(this).attr("intervalid"),radix);
+				clearInterval(intervalID);
+				$(this).removeClass('animated');
+				$(this).trigger('animationFinished');
+				//index = 0;
+				return;
+			}
 		}
 	});
 }
@@ -43,48 +45,23 @@ function stopAnimatedImages(Parent) {
     });
 }
 
-
+$.fn.rewindAnim = function(){
+	var src = $(this).attr("pattern");
+	src = src.replace("#", "00000");
+	$(this).attr("src", src);
+}
 $.fn.startAnim = function(){
-	//console.log($(this));
-		console.log('déjà ?');
 	$(this).addClass('animated');
 	var interval = $(this).attr("interval");
 	$(this).attr("index", "0");
-	var intervalID = setInterval(function () { animateImage(); }, interval);
-	//var intervalID = setInterval( $(this).animateRoutine, interval);
+	var intervalID = setInterval(function () { animateImage(); }, interval);	
 	$(this).attr("intervalid", intervalID);
+	//$(this).show();
+	$(this).css('display','block');
+	//console.log('show');
 }
-/*
-$.fn.animateRoutine = function() {
-		if (!$(this).is(":visible")) {
-			var intervalID = parseInt($(this).attr("intervalid"),radix);
-			clearInterval(intervalID);
-		} else {
-			var max = parseInt($(this).attr("max"),radix);
-			var pattern = $(this).attr("pattern");
-			var index = parseInt($(this).attr("index"),radix);
-			index++;
-			if (index > max) {
-				var intervalID = parseInt($(this).attr("intervalid"),radix);
-				clearInterval(intervalID);
-				$(this).hide();
-				return;
-			}
-			index = ('00000' + index).substr(-5); 
-			var src = pattern.replace("#", index);
-			$(this).attr("index", index);
-			$(this).attr("src", src);
-		}
-	//});
-}
-*/
 
 $(document).ready(function(){
-	/*
-	$('.slideshow').bind('click',function(){
-		nextSlide();
-	});
-	*/
 	function nextSlide(){
 		var $next;
 		var $slide = $('.slideshow');
@@ -97,28 +74,26 @@ $(document).ready(function(){
 		$('img.current',$slide).removeClass('current');
 		$next.addClass('current');
 	}
-	var slideinterval = setInterval(nextSlide,5000);
+	//var slideinterval = setInterval(nextSlide,5000);
 
-
-	var chillduration = 2000;
+	var chillduration = 1000;
 	$('img').bind('animationFinished',function(e){
-		console.log('ah '+chillduration);
 		if(e.target==$("img#in")[0]){
-			$("img#in").hide();
-			$("img#out").show();
-			setTimeout(function(){$('img#out').startAnim()},chillduration);
+			setTimeout(function(){
+				$('img#out').startAnim();
+				$("img#in").rewindAnim();
+				$("img#in").hide();
+				
+			},chillduration);
 		}else{
-			$("img#out").hide();
-			$("img#in").show();
-			setTimeout(function(){$('img#in').startAnim()},chillduration);
+			setTimeout(function(){
+				$('img#in').startAnim();
+				$("img#out").rewindAnim();
+				$("img#out").hide();
+			},chillduration);
 		}
-	})
-
+	});
 	$('img#in').startAnim();
-
-
-
-
 });
 
 
