@@ -1,94 +1,31 @@
 doctype html
 html
-  head
-    title [ Cofely ]
-    link(rel="stylesheet", href="css/main.css", type="text/css")
-    script(type="text/javascript" src="js/vendors/jquery/dist/jquery.min.js")
-    script(type="text/javascript" src="js/slick.js")
-    script(type="text/javascript" src="js/app.js")
-    script(type="text/javascript" src="js/pagefade.js")
-    meta(http-equiv="content-type" content="text/html; charset=utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  body()
-    div(id="wrapper")
-      div(class="mySlide content")
-        div
-          img(src="images/profil_1/ET_0/P1_E0_0.png")
-          div(class="audioplayer")
-            img(src="images/audioplayer/play.png" class="play" data-audiosrc="media/p1_e0.mp3")
-            img(src="images/audioplayer/pause.png" class="pause")
-            img(src="images/audioplayer/mute.png" class="mute")
-          img(src="images/profil_1/ET_0/P1_E0_01_01.png" class="lk1")
-          img(src="images/profil_1/ET_0/P1_E0_01_02.png" class="lk2")
-          img(src="images/profil_1/ET_0/P1_E0_01_03.png" class="lk3")
-          img(src="images/profil_1/ET_0/P1_E0_01_04.png" class="lk4")
-          img(src="images/profil_1/ET_0/P1_E0_01_05.png" class="lk5")
-        div(data-label="9:00")
-          img(data-lazy="images/profil_1/P1_E1_01_T-title.png" class="t1 hidden")
-          img(data-lazy="images/profil_1/P1_E1_01_T.png")
-          div(class="audioplayer")
-            img(src="images/audioplayer/play.png" class="play" data-audiosrc="media/p1_e1.mp3")
-            img(src="images/audioplayer/pause.png" class="pause")
-            img(src="images/audioplayer/mute.png" class="mute")
-        div
-          img(data-lazy="images/profil_1/P1_E1_02_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E1_03_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E1_04_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E1_05_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E1_06_T.png")
-        div(data-label="11:00")
-          img(data-lazy="images/profil_1/P1_E1_01_T-title.png" class="t1 hidden")          
-          img(data-lazy="images/profil_1/P1_E2_01_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E2_02_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E2_03_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E2_04_T.png")
-        div(data-label="14:00")
-          img(data-lazy="images/profil_1/P1_E1_01_T-title.png" class="t1 hidden")
-          img(data-lazy="images/profil_1/P1_E3_01_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E3_02_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E3_03_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E3_04_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E3_05_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E3_06_T.png")
-        div(data-label="16:00")
-          img(data-lazy="images/profil_1/P1_E1_01_T-title.png" class="t1 hidden")
-          img(data-lazy="images/profil_1/P1_E4_01_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E4_02_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E4_03_T.png")
-        div(data-label="18:00")
-          img(data-lazy="images/profil_1/P1_E1_01_T-title.png" class="t1 hidden")
-          img(data-lazy="images/profil_1/P1_E5_01_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E5_02_T.png")
-        div
-          img(data-lazy="images/profil_1/P1_E5_03_T.png")
-      div(class="btns")
-        div(class="retour")
-        div(class="retour")
-          a(href="splash.html?fade=white")
-            img(src="images/logo_showroom.png")
-            span Accueil
-        div(class="credits")
-          img(src="images/picto_credit.png")
-          span Crédits
-        div(class="logo_cofely")
-          img(src="images/logo_cofely.png")
-        div(class="home_profil")
-          span retour
-    div(id="audioplayer")
-      audio(preload="none")
-        source
+	head
+		title [ Cofely ]
+		link(rel="stylesheet", href="css/splash.css", type="text/css")
+		script(type="text/javascript" src="js/vendors/jquery/dist/jquery.min.js")
+		script(type="text/javascript" src="js/slick.js")
+		script(type="text/javascript" src="js/splash.js")
+		script(type="text/javascript" src="js/pagefade.js")
+		meta(http-equiv="content-type" content="text/html; charset=utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	body()
+		div(class="slideshow")
+			img(src="images/splash/ECRAN_ACCUEIL_IMAGE_1.jpg" class="current")
+			img(src="images/splash/ECRAN_ACCUEIL_IMAGE_2.jpg")
+			img(src="images/splash/ECRAN_ACCUEIL_IMAGE_3.jpg")
+			img(src="images/splash/ECRAN_ACCUEIL_IMAGE_4.jpg")
+			img(src="images/splash/ECRAN_ACCUEIL_IMAGE_5.jpg")
+
+		div(class="logo")
+			img(id="in" interval=41 max=93 pattern="./images/splash/logoanim/anim_logoCOFELY_v2_in_#.png")
+			img(id="out" interval=41 max=50 pattern="./images/splash/logoanim/anim_logoCOFELY_v2_out_#.png")
+
+		div(class="cofelylogo")
+			img(src="./images/splash/ECRAN_ACCUEIL_LOGO_INEO.png")
+
+		div(class="start")
+			a(href="index.html?fade=black")
+
+		div(class="baseline")
+			img(src="./images/splash/ECRAN_ACCUEIL_BASELINE.png")
