@@ -1,0 +1,36 @@
+body
+  width 1920px
+  height 1080px
+  overflow hidden
+  background-image url('../images/bg.jpg')
+  background-size cover
+  #wrapper
+    text-align center
+    padding-top 40px
+    position relative
+    [class^='mask']
+      position absolute
+      background #3f3f8d
+      transition 1s
+      cursor pointer
+      min-height 300px
+      width 360px
+      opacity 0
+      &:hover
+        opacity .5
+        min-height 300px
+    .mask1
+      top 538px
+      left 151px
+    .mask2
+      top 158px
+      left 651px
+    .mask3
+      top 158px
+      left 1192px
+    .mask4
+      top 538px
+      left 831px
+    .mask5
+      top 538px
+      left 1391px

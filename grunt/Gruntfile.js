@@ -82,6 +82,12 @@ module.exports = function(grunt) {
           dest: 'public/css',
           expand: true,
           ext: '.css',
+        },{
+          cwd: 'dev/stylus',
+          src: 'home_profil.styl',
+          dest: 'public/css',
+          expand: true,
+          ext: '.css',
         }],
       },
     },
