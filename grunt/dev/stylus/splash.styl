@@ -1,0 +1,49 @@
+@import "mixins.styl"
+@import "variables.styl"
+@import "fonts.styl"
+@import "reset.styl"
+global-reset()
+html
+	body
+		div.slideshow
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			overflow hidden
+			img
+				position absolute
+				transition:opacity 2s
+				opacity 0
+				&.current
+						opacity 1
+		div.logo
+			position absolute
+			img
+				position absolute
+				top 266px
+				left 677px
+				//top 119px
+				&#out
+					display none
+		div.cofelylogo
+			position absolute
+			left 1559px
+			top 33px
+		div.start
+			position absolute
+			left 681px
+			top 679px
+			a
+				background url(../images/splash/ECRAN_ACCUEIL_BOUTON.png)
+				width 556px
+				height 132px
+				display block
+				background-position-y 132px
+				&:hover
+					background-position-y 0px
+		div.baseline
+			position absolute
+			top 1012px
+			left 651px

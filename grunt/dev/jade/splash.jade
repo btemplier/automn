@@ -1,0 +1,30 @@
+doctype html
+html
+	head
+		title [ Cofely ]
+		link(rel="stylesheet", href="css/splash.css", type="text/css")
+		script(type="text/javascript" src="js/vendors/jquery/dist/jquery.min.js")
+		script(type="text/javascript" src="js/slick.js")
+		script(type="text/javascript" src="js/splash.js")
+		meta(http-equiv="content-type" content="text/html; charset=utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	body()
+		div(class="slideshow")
+			img(src="images/splash/ECRAN_ACCUEIL_IMAGE_1.jpg" class="current")
+			img(src="images/splash/ECRAN_ACCUEIL_IMAGE_2.jpg")
+			img(src="images/splash/ECRAN_ACCUEIL_IMAGE_3.jpg")
+			img(src="images/splash/ECRAN_ACCUEIL_IMAGE_4.jpg")
+			img(src="images/splash/ECRAN_ACCUEIL_IMAGE_5.jpg")
+
+		div(class="logo")
+			img(id="in" interval=41 max=93 pattern="./images/splash/logoanim/anim_logoCOFELY_v2_in_#.png" src="./images/splash/logoanim/anim_logoCOFELY_v2_in_00000.png")
+			img(id="out" interval=41 max=50 pattern="./images/splash/logoanim/anim_logoCOFELY_v2_out_#.png" src="./images/splash/logoanim/anim_logoCOFELY_v2_out_00000.png")
+
+		div(class="cofelylogo")
+			img(src="./images/splash/ECRAN_ACCUEIL_LOGO_INEO.png")
+
+		div(class="start")
+			a(href="index.html")
+
+		div(class="baseline")
+			img(src="./images/splash/ECRAN_ACCUEIL_BASELINE.png")
