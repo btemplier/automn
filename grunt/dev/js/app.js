@@ -84,4 +84,29 @@ $(document).ready(function(){
     $('#audioplayer audio')[0].muted = !$('#audioplayer audio')[0].muted;
   })
   
+
+  var counterSpeed = 1500;
+  var intervalstep = 40;
+  $.fn.changeNumbers = function(end){
+    console.log(end);
+    var start = parseInt($(this).text(),10);
+    var step = Math.round(intervalstep*(end-start)/counterSpeed);
+    var $counter = $(this); 
+    var timer = setInterval(function(){
+      if(step*start < step*end){
+        start+=step;
+        $counter.text(('000000' + start).substr(-6)); 
+      }else{
+        start = end;
+        $counter.text(('000000' + start).substr(-6));
+        clearInterval(timer);
+      }
+    },intervalstep);
+
+  }
+  $('.counter').click(function(){
+    $(this).changeNumbers(parseInt(100000*Math.random(),10));
+  })
+
+
 });

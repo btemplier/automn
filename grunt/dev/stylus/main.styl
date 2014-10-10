@@ -3,6 +3,36 @@
 @import "fonts.styl"
 @import "reset.styl"
 global-reset()
+
+@font-face {
+  font-family: nimbus-bold;
+  src:url(../fonts/nimbus/nimbussannov-bol-webfont.eot);
+  src:url(../fonts/nimbus/nimbussannov-bol-webfont.svg);
+  src:url(../fonts/nimbus/nimbussannov-bol-webfont.ttf);
+  src:url(../fonts/nimbus/nimbussannov-bol-webfont.woff);
+}
+@font-face {
+  font-family: nimbus-med;
+  src:url(../fonts/nimbus/nimbussannov-med-webfont.eot);
+  src:url(../fonts/nimbus/nimbussannov-med-webfont.svg);
+  src:url(../fonts/nimbus/nimbussannov-med-webfont.ttf);
+  src:url(../fonts/nimbus/nimbussannov-med-webfont.woff);
+}
+@font-face {
+  font-family: nimbus-reg;
+  src:url(../fonts/nimbus/nimbussannov-reg-webfont.eot);
+  src:url(../fonts/nimbus/nimbussannov-reg-webfont.svg);
+  src:url(../fonts/nimbus/nimbussannov-reg-webfont.ttf);
+  src:url(../fonts/nimbus/nimbussannov-reg-webfont.woff);
+}
+@font-face {
+  font-family: nimbuscon-reg;
+  src:url(../fonts/nimbus/nimbussannovcon-reg-webfont.eot);
+  src:url(../fonts/nimbus/nimbussannovcon-reg-webfont.svg);
+  src:url(../fonts/nimbus/nimbussannovcon-reg-webfont.ttf);
+  src:url(../fonts/nimbus/nimbussannovcon-reg-webfont.woff);
+}
+
 html
   
 
@@ -102,6 +132,7 @@ body
   height: 1080px;
 .slick-slide
   position relative
+  // TITRES
   .t1
     margin 0
     position absolute
@@ -110,6 +141,7 @@ body
   &:nth-child(2) .t1
     left 962px
     top 160px
+    // Break etape 2
   &:nth-child(8) .t1
     left 681px
     top 169px
@@ -130,6 +162,22 @@ body
     padding: 0;
     margin 160px;
     //width 90%
+      
+  // WIDGETS
+  &:nth-child(9)
+    .counter
+      position absolute
+      font-family nimbus-bold
+      z-index 1
+      letter-spacing 17.6px
+      &#puissanceparc,
+      &#totaleconomies
+        font-size 36px
+        top 382px
+      &#puissanceparc
+        left 200px
+      &#totaleconomies
+        left 501px
 
 /*----------*/
 /* TIMELINE */
@@ -308,6 +356,7 @@ body
       width 200%
       left -100%
       padding-left 3px
+      font-family nimbus-reg
   
 /* FIN TIMELINE */
 
