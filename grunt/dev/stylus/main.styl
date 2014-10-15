@@ -162,20 +162,67 @@ body
     //width 90%
       
   // WIDGETS
-  &:nth-child(9)
+  &:nth-child(9),
+  &:nth-child(10)
     .counter
       position absolute
       font-family nimbus-bold
       z-index 1
       letter-spacing 17.6px
+      color:#969696;
       &#puissanceparc,
-      &#totaleconomies
+      &#totaleconomies,
+      &#puissanceparc2,
+      &#totaleconomies2
         font-size 36px
         top 382px
       &#puissanceparc
         left 200px
       &#totaleconomies
         left 501px
+      &.mini
+        top: 506px;
+        font-size: 26px;
+        letter-spacing: 12px;
+        &#lampespuissance
+          left: 193px;
+        &#lampeseconomies
+          left: 385px;
+          letter-spacing: 15px;
+        &#ballonspuissance
+          left: 1365px;
+        &#ballonseconomies
+          left: 1557px;
+          letter-spacing: 15px;
+        
+      &#puissanceparc2,
+      &#totaleconomies2
+        left 1504px
+        letter-spacing 16px
+      &#puissanceparc2
+        top 313px
+      &#totaleconomies2
+        top 453px
+    .counterbutton
+      width 162px
+      height 162px
+      border-radius 81px
+      position absolute
+      background white
+      opacity 0
+      transition opacity 0.3s
+      z-index 20
+      &.toggled
+        opacity 0.2
+      &#boutonlampes
+        top 560px
+        left 278px
+      &#boutonballons
+        top 560px
+        left 1448px
+      &#boutontelegestion
+        top 581px
+        left 274px
 
 /*----------*/
 /* TIMELINE */

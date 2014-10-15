@@ -93,28 +93,74 @@ $(document).ready(function(){
   })
   
 
+
+
+  // COUNTER WIDGET
   var counterSpeed = 1500;
-  var intervalstep = 40;
-  $.fn.changeNumbers = function(end){
-    console.log(end);
-    var start = parseInt($(this).text(),10);
+  var intervalstep = 50;
+  $.fn.changeNumbers = function(delta){
+    var end = parseInt($(this).attr('value'),10)+parseInt(delta,10);
+    var start = parseInt($(this).attr('value'),10);
+    $(this).attr('value',end);
     var step = Math.round(intervalstep*(end-start)/counterSpeed);
     var $counter = $(this); 
     var timer = setInterval(function(){
       if(step*start < step*end){
         start+=step;
-        $counter.text(('000000' + start).substr(-6)); 
+        $counter.text(('000000' + start).substr(-$counter.attr('length'))); 
       }else{
         start = end;
-        $counter.text(('000000' + start).substr(-6));
+        $counter.text(('000000' + start).substr(-$counter.attr('length')));
         clearInterval(timer);
       }
     },intervalstep);
 
   }
-  $('.counter').click(function(){
-    $(this).changeNumbers(parseInt(100000*Math.random(),10));
-  })
+  $('.counter').each(function(){
+    $(this).attr('value',$(this).text());
+    $(this).attr('length',$(this).text().length);
+  });
+  $('.counterbutton#boutonlampes').bind('click touchend',function(){
+    if($(this).hasClass('toggled')){
+      $(this).removeClass('toggled');
+      $('#puissanceparc, #puissanceparc2').changeNumbers($(this).attr('powervalue'));
+      $('#lampespuissance').changeNumbers($(this).attr('powervalue'));
+      $('#totaleconomies, #totaleconomies2').changeNumbers(-$(this).attr('costvalue'));
+      $('#lampeseconomies').changeNumbers($(this).attr('costvalue'));
+    }else{
+      $(this).addClass('toggled');
+      $('#puissanceparc, #puissanceparc2').changeNumbers(-$(this).attr('powervalue'));
+      $('#lampespuissance').changeNumbers(-$(this).attr('powervalue'));
+      $('#totaleconomies, #totaleconomies2').changeNumbers($(this).attr('costvalue'));
+      $('#lampeseconomies').changeNumbers(-$(this).attr('costvalue'));
+    }
+  });
+  $('.counterbutton#boutonballons').bind('click touchend',function(){
+    if($(this).hasClass('toggled')){
+      $(this).removeClass('toggled');
+      $('#puissanceparc, #puissanceparc2').changeNumbers($(this).attr('powervalue'));
+      $('#ballonspuissance').changeNumbers($(this).attr('powervalue'));
+      $('#totaleconomies, #totaleconomies2').changeNumbers(-$(this).attr('costvalue'));
+      $('#ballonseconomies').changeNumbers($(this).attr('costvalue'));
+    }else{
+      $(this).addClass('toggled');
+      $('#puissanceparc, #puissanceparc2').changeNumbers(-$(this).attr('powervalue'));
+      $('#ballonspuissance').changeNumbers(-$(this).attr('powervalue'));
+      $('#totaleconomies, #totaleconomies2').changeNumbers($(this).attr('costvalue'));
+      $('#ballonseconomies').changeNumbers(-$(this).attr('costvalue'));
+    }
+  });
+  $('.counterbutton#boutontelegestion').bind('click touchend',function(){
+    if($(this).hasClass('toggled')){
+      $(this).removeClass('toggled');
+      $('#puissanceparc, #puissanceparc2').changeNumbers($(this).attr('powervalue'));
+      $('#totaleconomies, #totaleconomies2').changeNumbers(-$(this).attr('costvalue'));
+    }else{
+      $(this).addClass('toggled');
+      $('#puissanceparc, #puissanceparc2').changeNumbers(-$(this).attr('powervalue'));
+      $('#totaleconomies, #totaleconomies2').changeNumbers($(this).attr('costvalue'));
+    }
+  });
 
 
 });
