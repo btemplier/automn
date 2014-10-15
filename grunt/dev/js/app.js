@@ -123,12 +123,18 @@ $(document).ready(function(){
   $('.counterbutton#boutonlampes').bind('click touchend',function(){
     if($(this).hasClass('toggled')){
       $(this).removeClass('toggled');
+      // INTERACTION SHOWCONTROL LAMPES
+      console.log('raise back lamp power (x2)');
+      // endof interaction
       $('#puissanceparc, #puissanceparc2').changeNumbers($(this).attr('powervalue'));
       $('#lampespuissance').changeNumbers($(this).attr('powervalue'));
       $('#totaleconomies, #totaleconomies2').changeNumbers(-$(this).attr('costvalue'));
       $('#lampeseconomies').changeNumbers($(this).attr('costvalue'));
     }else{
       $(this).addClass('toggled');
+      // INTERACTION SHOWCONTROL LAMPES
+      console.log('reduce lamp power x2');
+      // endof interaction
       $('#puissanceparc, #puissanceparc2').changeNumbers(-$(this).attr('powervalue'));
       $('#lampespuissance').changeNumbers(-$(this).attr('powervalue'));
       $('#totaleconomies, #totaleconomies2').changeNumbers($(this).attr('costvalue'));

@@ -182,7 +182,13 @@ body
     margin 160px;
     //width 90%
       
-  // WIDGETS
+
+  /////////////
+  // WIDGETS //
+  /////////////
+    
+
+  // PROFIL 1 ETAPE 2, COUNTERS
   &:nth-child(9),
   &:nth-child(10)
     .counter
@@ -244,6 +250,45 @@ body
       &#boutontelegestion
         top 581px
         left 274px
+
+
+  // PROFIL 1 ETAPE 2, Alertes
+  &:nth-child(11)
+    @keyframes pulse {
+      0%{ 
+        opacity 1
+      }
+      50%{ 
+        opacity 0
+      }
+      100%{
+        opacity 1 
+      }
+    }
+    .alertlogo
+      animation pulse 1s infinite
+      -webkit-animation: pulse 1s infinite;
+      -moz-animation:    pulse 1s infinite;
+      -o-animation:      pulse 1s infinite;
+      position absolute
+      width 89px
+      height 89px
+      background-image url('../images/alerticon.png')
+      &:nth-child(1)
+        top 364px
+        left 677px
+      &:nth-child(2)
+        top 538px
+        left 622px
+      &:nth-child(3)
+        top 512px
+        left 773px
+
+
+
+
+
+
 
 /*----------*/
 /* TIMELINE */
@@ -604,3 +649,27 @@ body
 /* Dots */
 .slick-slider
   margin-bottom 0px
+
+
+
+
+@-webkit-keyframes pulse {
+  0%   { opacity: 1; }
+  50%   { opacity: 0; }  
+  100% { opacity: 1; }
+}
+@-moz-keyframes pulse {
+  0%   { opacity: 1; }
+  50%   { opacity: 0; }  
+  100% { opacity: 1; }
+}
+@-o-keyframes pulse {
+  0%   { opacity: 1; }
+  50%   { opacity: 0; }  
+  100% { opacity: 1; }
+}
+@keyframes pulse {
+  0%   { opacity: 1; }
+  50%   { opacity: 0; }  
+  100% { opacity: 1; }
+}
