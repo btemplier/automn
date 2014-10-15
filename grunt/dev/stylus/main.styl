@@ -4,38 +4,6 @@
 @import "reset.styl"
 global-reset()
 
-@font-face {
-  font-family: nimbus-bold;
-  src:url(../fonts/nimbus/nimbussannov-bol-webfont.eot);
-  src:url(../fonts/nimbus/nimbussannov-bol-webfont.svg);
-  src:url(../fonts/nimbus/nimbussannov-bol-webfont.ttf);
-  src:url(../fonts/nimbus/nimbussannov-bol-webfont.woff);
-}
-@font-face {
-  font-family: nimbus-med;
-  src:url(../fonts/nimbus/nimbussannov-med-webfont.eot);
-  src:url(../fonts/nimbus/nimbussannov-med-webfont.svg);
-  src:url(../fonts/nimbus/nimbussannov-med-webfont.ttf);
-  src:url(../fonts/nimbus/nimbussannov-med-webfont.woff);
-}
-@font-face {
-  font-family: nimbus-reg;
-  src:url(../fonts/nimbus/nimbussannov-reg-webfont.eot);
-  src:url(../fonts/nimbus/nimbussannov-reg-webfont.svg);
-  src:url(../fonts/nimbus/nimbussannov-reg-webfont.ttf);
-  src:url(../fonts/nimbus/nimbussannov-reg-webfont.woff);
-}
-@font-face {
-  font-family: nimbuscon-reg;
-  src:url(../fonts/nimbus/nimbussannovcon-reg-webfont.eot);
-  src:url(../fonts/nimbus/nimbussannovcon-reg-webfont.svg);
-  src:url(../fonts/nimbus/nimbussannovcon-reg-webfont.ttf);
-  src:url(../fonts/nimbus/nimbussannovcon-reg-webfont.woff);
-}
-
-html
-  
-
 /* Main css */
 html
   width 100%
@@ -133,18 +101,50 @@ body
 .slick-slide
   position relative
   // TITRES
-  .t1
+  .t1, .t2
     margin 0
     position absolute
     opacity 1
     transition(all 1s ease-out)
+    &.hidden
+      opacity 0!important
+      transition(all 1s ease-out)
+  // POSITION TITRE ETAPE 1
   &:nth-child(2) .t1
     left 962px
     top 160px
-    // Break etape 2
+    
+  &:nth-child(3) .t1
+    left 161px
+    top 161px
+  &:nth-child(3) .t2
+    left 529px
+    top 240px
+  &:nth-child(4) .t1
+    left 171px
+    top 165px
+  &:nth-child(4) .t2
+    left 329px
+    top 240px
+  &:nth-child(5) .t1
+    left 161px
+    top 160px
+  &:nth-child(5) .t2
+    left 201px
+    top 234px
+  &:nth-child(6) .t2
+    left 231px
+    top 160px
+  &:nth-child(7) .t2
+    left 231px
+    top 160px
+  // POSITION TITRE ETAPE 2
   &:nth-child(8) .t1
     left 681px
     top 169px
+  &:nth-child(9) .t1
+    left 168px
+    top 183px
   &:nth-child(12) .t1
     left 922px
     top 240px
@@ -154,9 +154,7 @@ body
   &:nth-child(21) .t1
     left: 660px;
     top: 159px;    
-  &.hidden
-    opacity 0!important
-    transition(all 1s ease-out)
+  
   img 
     display: block;
     padding: 0;
