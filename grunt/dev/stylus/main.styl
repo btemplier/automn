@@ -254,22 +254,11 @@ body
 
   // PROFIL 1 ETAPE 2, Alertes
   &:nth-child(11)
-    @keyframes pulse {
-      0%{ 
-        opacity 1
-      }
-      50%{ 
-        opacity 0
-      }
-      100%{
-        opacity 1 
-      }
-    }
     .alertlogo
-      animation pulse 1s infinite
-      -webkit-animation: pulse 1s infinite;
-      -moz-animation:    pulse 1s infinite;
-      -o-animation:      pulse 1s infinite;
+      animation pulse 2s infinite
+      -webkit-animation: pulse 2s infinite;
+      -moz-animation:    pulse 2s infinite;
+      -o-animation:      pulse 2s infinite;
       position absolute
       width 89px
       height 89px
@@ -283,6 +272,23 @@ body
       &:nth-child(3)
         top 512px
         left 773px
+      &:hover
+        animation none
+        -webkit-animation none
+        -moz-animation none
+        -o-animation none
+
+
+  // AUDIOPLAYERS
+  &:nth-child(1)
+    .audioplayer
+      top 469px
+      left 463px
+  &:nth-child(2)
+    .audioplayer
+      top 509px
+      left 463px
+      
 
 
 
@@ -558,16 +564,36 @@ body
       background-color rgba(63,134,141,0.50) 
   .audioplayer
     position absolute
-    top 415px
-    left 503px
     img
       margin 0px
       display inline-block 
       vertical-align middle
       margin-right 12px
       cursor pointer
+      &.pause
+        margin-left 1px
+      &.playpause
+        margin-right 21px
+      &.voldown
+        margin-right 3px
+      &.volup
+        margin-left 7px
       &.mute
         margin-left 11px
+    .volled
+      width:49px;
+      height:11px;
+      background-image url('../images/audioplayer/voloff.png')
+      position relative
+      display inline-block
+      vertical-align middle
+      .volledon,
+      .volledoff
+        float:left;
+        height:11px;      
+      .volledon
+        background-image url('../images/audioplayer/volon.png');
+        width:64%;
   
 
 .slick-slide.slick-loading img
@@ -653,6 +679,11 @@ body
 
 
 
+@keyframes pulse {
+  0%{ opacity: 1; }
+  50%{ opacity: 0; }
+  100%{ opacity: 1; }
+}
 @-webkit-keyframes pulse {
   0%   { opacity: 1; }
   50%   { opacity: 0; }  

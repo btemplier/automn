@@ -76,20 +76,41 @@ $(document).ready(function(){
     });
   }
 
+  $('#audioplayer audio')[0].volume = 0.64;
+  $('.audioplayer .playpause').on('click',function(){
+    if($(this).hasClass('play')){
+      
+      $('.audioplayer .pause').attr('src','images/audioplayer/play.png');
+      $('.audioplayer .pause').removeClass('pause').addClass('play');
 
-  $('.audioplayer .play').bind('click',function(){
+      $(this).attr('src','images/audioplayer/pause.png');
+      $(this).add($('.audioplayer .pause')).removeClass('play').addClass('pause');
 
-    $('#audioplayer audio source').attr('src',$(this).attr('data-audiosrc'));
-    $('#audioplayer audio')[0].pause();
-    $('#audioplayer audio')[0].load();//suspends and restores all audio element
-    $('#audioplayer audio')[0].play();
 
+      $('#audioplayer audio source').attr('src',$(this).attr('data-audiosrc'));
+      $('#audioplayer audio')[0].pause();
+      $('#audioplayer audio')[0].load();//suspends and restores all audio element
+      $('#audioplayer audio')[0].play();
+    }else{
+      $('.audioplayer .playpause').attr('src','images/audioplayer/play.png');
+      $('.audioplayer .playpause').removeClass('pause').addClass('play');
+      $('#audioplayer audio')[0].pause();  
+    }
   })
-  $('.audioplayer .pause').bind('click',function(){
-    $('#audioplayer audio')[0].pause();  
+  /*
+  $('.audioplayer .pause').on('click',function(){
   })
-  $('.audioplayer .mute').bind('click',function(){
+*/
+  $('.audioplayer .mute').on('click',function(){
     $('#audioplayer audio')[0].muted = !$('#audioplayer audio')[0].muted;
+  })
+  $('.audioplayer .volup').on('click',function(){
+    $('#audioplayer audio')[0].volume = Math.min(1.0 , $('#audioplayer audio')[0].volume + 1/6);
+    $('.audioplayer .volledon').css('width',($('#audioplayer audio')[0].volume * 100)+"%");
+  })
+  $('.audioplayer .voldown').on('click',function(){
+    $('#audioplayer audio')[0].volume = Math.max(0.0 , $('#audioplayer audio')[0].volume - 1/6);
+    $('.audioplayer .volledon').css('width',($('#audioplayer audio')[0].volume * 100)+"%");
   })
   
 
@@ -166,6 +187,15 @@ $(document).ready(function(){
       $('#puissanceparc, #puissanceparc2').changeNumbers(-$(this).attr('powervalue'));
       $('#totaleconomies, #totaleconomies2').changeNumbers($(this).attr('costvalue'));
     }
+  });
+
+
+
+  // P1_E2_E4 alert buttons
+  $('.alertlogo').bind('click touchend',function(){
+      // INTERACTION VIDEOPROJECTION
+      console.log('show VP alert button #'+$(this).index());
+      // endof interaction
   });
 
 
