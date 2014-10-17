@@ -199,4 +199,26 @@ $(document).ready(function(){
   });
 
 
+
+  // P1_E3_E3 diaporama tablette
+  $('.slick-slide[index=13] .squarebuttons .button').bind('click touchend',function(){
+    $('.slick-slide[index=13] .diapos img:first').animate({'margin-left':-($(this).index()*590)+'px'}, 500);
+    $('.slick-slide[index=13] .diapos img.current').removeClass('current');
+    $('.slick-slide[index=13] .diapos img').eq($(this).index()).addClass('current');
+  });
+  $('.slick-slide[index=13] .diapoprev').bind('click touchend',function(){
+    $current = $('.slick-slide[index=13] .diapos img.current');
+    if($current.prev().length > 0){
+      $current.removeClass('current').prev().addClass('current');
+      $('.slick-slide[index=13] .diapos img:first').animate({'margin-left':-($current.prev().index()*590)+'px'}, 500);
+    }
+  });
+  $('.slick-slide[index=13] .diaponext').bind('click touchend',function(){
+    $current = $('.slick-slide[index=13] .diapos img.current');
+    if($current.next().length > 0){
+      $current.removeClass('current').next().addClass('current');
+      $('.slick-slide[index=13] .diapos img:first').animate({'margin-left':-($current.next().index()*590)+'px'}, 500);
+    }
+  });
+
 });
