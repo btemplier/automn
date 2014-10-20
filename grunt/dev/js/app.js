@@ -47,6 +47,14 @@ $(document).ready(function(){
     $('.slick-active .t2').css("opacity", "0");
    };
   }
+  $(".home_profil").click(function() {
+    $(".popin, .opa").show();
+  });
+  $(".opa, button.non, .close").click(function() {
+    $(".popin, .opa").hide();
+  });
+  var contentFirst = "<div class='contentPlus'><img src='images/profil_1/debut_journee.png' alt=''/></div>";
+  $('.slick-dots li:first-child').append(contentFirst);
   var $slickdots = $('.slick-dots');
   $('li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5), li:nth-child(6), li:nth-child(7)',$slickdots).addClass('first');
   $('li:nth-child(8), li:nth-child(9), li:nth-child(10), li:nth-child(11)',$slickdots).addClass('second');
