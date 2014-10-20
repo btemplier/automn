@@ -14,7 +14,56 @@ body
   overflow hidden
   background-image url('../images/bg.jpg')
   background-size cover
-
+  .opa
+    background url('../images/bg-opa.png') repeat
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    display none
+  .popin
+    display none
+    background white
+    z-index 2
+    position absolute
+    top 375px
+    left 680px
+    width 680px
+    height 320px
+    text-align center
+    padding-top 45px
+    box-shadow(2px 3px 10px #333)
+    .close
+      width 30px
+      height 30px
+      position absolute
+      right 10px
+      top 10px
+      float right
+      font-size 30px
+      transform rotate(45deg)
+      cursor pointer
+    .oui
+      margin-top 30px
+      margin-right 80px
+      border 0
+      background url('../images/btn-oui.png')
+      width 150px
+      height 57px
+      cursor pointer
+      &:focus
+        border 0
+        outline none
+    .non
+      border 0
+      background url('../images/btn-non.png')
+      width 150px
+      height 57px
+      cursor pointer
+      &:focus
+        border 0
+        outline none
   .home
     position: absolute;
     left 160px
@@ -365,7 +414,7 @@ body
   text-align center
   position relative
   top -150px
-  width 1500px
+  width 1400px
   margin 0 auto
   li
     margin-top 20px
@@ -487,8 +536,11 @@ body
         &:hover,
         &:focus
           box-shadow:0;
-
-
+      .contentPlus
+        text-indent 0
+        position absolute
+        top 70px
+        left -140px
     button
       border-width 5px
       border-style solid
@@ -566,8 +618,6 @@ body
   .dragging
     cursor pointer
     cursor hand 
-.slick-loading .slick-list
-  background white url("./ajax-loader.gif") center center no-repeat
 
 .slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img
   -webkit-transform translate3d(0, 0, 0)
