@@ -1,10 +1,18 @@
-var socket = io('http://localhost:1456');
-socket.emit('tabletevent', { 'startprofil': 'true' });
-socket.on('news', function (data) {
-  console.log(data);
-  //socket.emit('my other event', { my: 'data' });
-  //console.log(window.location.search);
+/*var socket = io.connect();
+console.log('check 1', socket.socket.connected);
+socket.on('connect', function() {
+  console.log('check 2', socket.socket.connected);
 });
+*/
+if (typeof io != 'undefined'){
+  var socket = io('http://localhost:1456');
+  socket.emit('tabletevent', { 'startprofil': 'true' });
+  socket.on('news', function (data) {
+    console.log(data);
+    //socket.emit('my other event', { my: 'data' });
+    //console.log(window.location.search);
+  });
+}
 /*
   $(document).ready(function(){
     $('#mybutton').bind('click',function(){
@@ -22,11 +30,15 @@ $(document).ready(function(){
     onAfterChange : function(index){
      titleOn();
      //console.log($('.slick-active').attr('data-video'));
-     socket.emit('tabletevent', { 'slick.onAfterChange': $('.slick-active').attr('data-video') });
+     if (typeof io != 'undefined'){
+      socket.emit('tabletevent', { 'slick.onAfterChange': $('.slick-active').attr('data-video') });
+      }
     },
     onBeforeChange : function(index){
      titleDel();
-     socket.emit('tabletevent', { 'slick.onBeforeChange': index.currentSlide });
+     if (typeof io != 'undefined'){
+        socket.emit('tabletevent', { 'slick.onBeforeChange': index.currentSlide });
+      }
     }
   });
   function titleOn() {
@@ -178,7 +190,9 @@ $(document).ready(function(){
       $(this).removeClass('toggled');
       // INTERACTION SHOWCONTROL LAMPES
       console.log('raise back lamp power (x2)');
-      socket.emit('tabletevent', { 'boutonlampes': 'off' });
+      if (typeof io != 'undefined'){
+        socket.emit('tabletevent', { 'boutonlampes': 'off' });
+      }
       // endof interaction
       $('#puissanceparc, #puissanceparc2').changeNumbers($(this).attr('powervalue'));
       $('#lampespuissance').changeNumbers($(this).attr('powervalue'));
@@ -188,7 +202,9 @@ $(document).ready(function(){
       $(this).addClass('toggled');
       // INTERACTION SHOWCONTROL LAMPES
       console.log('reduce lamp power x2');
-      socket.emit('tabletevent', { 'boutonlampes': 'on' });
+      if (typeof io != 'undefined'){
+        socket.emit('tabletevent', { 'boutonlampes': 'on' });
+      }
       // endof interaction
       $('#puissanceparc, #puissanceparc2').changeNumbers(-$(this).attr('powervalue'));
       $('#lampespuissance').changeNumbers(-$(this).attr('powervalue'));
@@ -229,7 +245,9 @@ $(document).ready(function(){
   $('.alertlogo').bind('click touchend',function(){
       // INTERACTION VIDEOPROJECTION
       console.log('show VP alert button #'+$(this).index());
-      socket.emit('tabletevent', { 'P1E2E4.alert': $(this).index() });
+      if (typeof io != 'undefined'){
+        socket.emit('tabletevent', { 'P1E2E4.alert': $(this).index() });
+      }
       // endof interaction
   });
 
