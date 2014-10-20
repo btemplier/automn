@@ -31,13 +31,20 @@ $(document).ready(function(){
    };
   }
   $(".home_profil").click(function() {
-    $(".popin, .opa").show();
+    $(".popin, .opa").css({'opacity':'1', 'pointer-events': 'initial'});
   });
   $(".opa, button.non, .close").click(function() {
-    $(".popin, .opa").hide();
+    $(".popin, .opa").css({'opacity':'0', 'pointer-events': 'none'});
   });
   var contentFirst = "<div class='contentPlus'><img src='images/profil_1/debut_journee.png' alt=''/></div>";
   $('.slick-dots li:first-child').append(contentFirst);
+  $('.slick-dots li:nth-child(2)').click(function() {
+    $(".contentPlus").show();
+  });
+  $('.slick-dots li').click(function() {
+    $(".contentPlus").hide();
+  });
+
   var $slickdots = $('.slick-dots');
   $('li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5), li:nth-child(6), li:nth-child(7)',$slickdots).addClass('first');
   $('li:nth-child(8), li:nth-child(9), li:nth-child(10), li:nth-child(11)',$slickdots).addClass('second');
