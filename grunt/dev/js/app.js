@@ -73,7 +73,9 @@ $(document).ready(function(){
   $('.slick-dots li').click(function() {
     $(".contentPlus").hide();
   });
-
+  $('.slick-dots li:nth-child(2)').click(function() {
+    $(".contentPlus").show();
+  });
   var $slickdots = $('.slick-dots');
   $('li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5), li:nth-child(6), li:nth-child(7)',$slickdots).addClass('first');
   $('li:nth-child(8), li:nth-child(9), li:nth-child(10), li:nth-child(11)',$slickdots).addClass('second');
