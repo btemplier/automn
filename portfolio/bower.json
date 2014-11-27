@@ -1,0 +1,11 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description": "manage dependencies",
+  "private": true,
+  "dependencies": {
+    "jquery": "https://github.com/jquery/jquery.git",
+    "jqueryfullPage": "https://github.com/alvarotrigo/fullPage.js.git",
+    "custom-scrollbar-plugin": "https://github.com/malihu/malihu-custom-scrollbar-plugin.git"
+  }
+}

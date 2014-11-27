@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title { www.templier-benoit.fr }
+    link(rel="stylesheet", href="css/main.css", type="text/css")
+    link(href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css')
+    script(type="text/javascript" src="js/vendors/jquery/dist/jquery.min.js")
+    script(type="text/javascript" src="js/vendors/custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js")
+    script(type="text/javascript" src="js/vendors/jquery.slimscroll/jquery.slimscroll.min.js")
+    script(type="text/javascript" src="js/app.js")
+    script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYOMPdkSnYa1uwUxMdjmesnb99ZPpLROA&sensor=true")
+
+      
+    meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  body
+    header
+      h1 TEMPLIER BENOIT [ Dev Front-end / Intégrateur sénior / Webdesigner ]
+    nav
+      ul
+        li(id="profil")
+          a(href="#")
+            span(class="icon-user")
+            span(class="txt") profil
+        li(id="experience")
+          a(href="#")
+            span(class="icon-profile")
+            span(class="txt") resume
+        li(id="portfolio")
+          a(href="#")
+            span(class="icon-menu")
+            span(class="txt") protfolio
+        li(id="contact")
+          a(href="#")
+            span(class="icon-mail2")
+            span(class="txt") contact
+    .wrapper
+      aside
+        ul
+          li 
+            a(href="https://twitter.com/BtempB" target="_blank" class="icon-twitter2")
+          li
+            a(href="https://www.facebook.com/BinoJoke" target="_blank" class="icon-facebook3")
+          li
+            a(href="https://plus.google.com/114105534852448380912/posts" target="_blank" class="icon-google-plus2")
+          li
+            a(href="https://www.linkedin.com/pub/benoit-templier/8a/940/159" target="_blank" class="icon-linkedin")
+          li
+            a(href="mailto:benoit.templier@gmail.com" target="_blank" class="icon-mail3")
+          li
+            a(href="" target="_blank" class="icon-skype")
+      block content
+    footer
+      | Copyright 
+      a(href="mailto:benoit.templier@gmail.com") Templier benoit
+      | 2014

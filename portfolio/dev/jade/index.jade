@@ -1,0 +1,128 @@
+extends layout/layout
+
+block content
+  section(class="container profil")
+    div(class="title")
+      a(href="")
+        span(class="icon-user")
+        | profil
+    section
+      div(class="content")
+        div(class="civil")
+          h4 Templier Benoit
+          h5 dev Front-end
+          .box-avatar
+            img(class="avatar octogon" src="images/avatar-sm.jpg")
+        .main
+          h4 qui suis-je ?
+          p Il y a bien longtemps, dans une galaxie lointaine, très lointaine, aucune société ne possédait son propre site web mais toutes en voulaient.<br>
+            | C'est à ce moment-là que je suis arrivé dans le métier, en 1999. Oui oui à cette epoque vous n'aviez pas encore de poils.
+            | 15 ans ont passé, les tableaux ont été aboli mais je continue à créer le web en tant que developpeur front-end/intégrateur.
+          p Après 5 ans passés en Agence, (Wcube, FiSystem, The CRM Company), je me suis lancé en freelance me demandant combien de temps cela durerait. 9 ans plus tard, je suis toujours là.
+          p Liste non exhaustive de mes qualités : pixelmaniac, beau, soucieux des contraintes clients, sympathique, veilleur, curieux, technophile, 
+
+  section(class="container experience")
+    div(class="title")
+      a(href="")
+        span(class="icon-profile")
+        | experiences / formations
+    section
+      div(class="content")
+        .formation
+          ul
+            li
+              h4 Ifocop
+                span 2005
+              h5 Développeur Intégrateur Web
+              p Résultat obtenu : Mention très bien
+              p Diplôme reconnu par l’État Niveau II, Titre certifié Développeur Intégrateur Web, enregistré au Répertoire National des Certifications Professionnelles
+              p
+                a(href="http://ifocop.fr/formation_developpeur_integrateur_web_option_php_oriente_objet.html") En savoir plus
+            li 
+              h4 IUT de Vélizy
+                span 1997 – 1999
+              h5 DUT Métiers du Multimédia et de l'Internet (MMI), anciennement Services et Réseaux de Communication
+              p Résultat obtenu : Mention assez bien
+                a(href="http://www.uvsq.fr/dut-metiers-du-multimedia-et-de-l-internet-mmi-ex-services-et-reseaux-de-communication-src--4121.kjsp") En savoir plus
+            li 
+              h4 Lycée Sainte-Marie d'Antony
+                span 1996
+              h5 Bacalauréat scientifique
+              p Résultat obtenu : Mention assez bien
+        .works
+          ul
+            li 
+              h4 E-tf1 - dev front-end
+                span 2 ans
+              h5 Refonte tf1.fr
+              p Cible : web, android, iOs
+              p Mission : templating complete du site tf1.fr
+              p Travail effectué : Templating sections 
+              p Techno : html5 / css3 / vanilla JS / ajax / json / kraken / dust / grunt / less
+              h5 Refonte brique authentification
+              p Cible : web, android, iOs
+              p Mission : templating formulaire inscription multi-device
+              p Travail effectué : gestion erreurs, integration tracking xiti, google analytics, integration DQE (APId e verification des adresses postales)
+              p Techno : html5 / css3 / JS / Jquery / ajax / json / grunt / jade / stylus
+              h5 Refonte tf1pro.fr
+              p Cible : web
+              p Mission : refonte totale du site sous le cms historique de TF1
+              p Travail effectué : templating twig
+              p Techno : html5 / css3 / JS / Jquery / ajax / json
+            li
+              h4 club med - dev front-end
+                span 1 mois
+              h5 refonte moteur de reservation
+              p cible : web, android iOs
+              p techno
+        .skills
+          ul
+            li
+              label html5
+              div(class="progress")
+                div(class="back" style="")
+                div(class="on" style="width:90%")
+              span 90%
+            li
+              label css3
+              div(class="progress")
+                div(class="back" style="")
+                div(class="on" style="width:85%")
+              span 85%
+            li
+              label js
+              div(class="progress")
+                div(class="back" style="")
+                div(class="on" style="width:65%")
+              span 65%
+            li
+              label photoshop
+              div(class="progress")
+                div(class="back" style="")
+                div(class="on" style="width:65%")
+              span 65%
+
+  section(class="container portfolio")
+    div(class="title")
+      a(href="")
+        span(class="icon-user")
+        | réalisations
+    section
+      div(class="content")
+        p plein de previews
+  section(class="container contact")
+    div(class="title")
+      a(href="")
+        span(class="icon-user")
+        | contact
+    section
+      div(class="content")
+        .formulaire
+          p Vous voulez des devis, des infomartions sur mes disponibilités, des conseils etc ... allez-y je vous écoute.
+          form
+            input(type="text" name="nom" placeholder="nom" required)
+            input(type="text" name="prenom" placeholder="prenom" required)
+            input(type="text" name="email" placeholder="email" required)
+            textarea(rows="10" cols="50" placeholder="votre message")
+            input(type="submit" value="send")
+        div(id="map-canvas")      
