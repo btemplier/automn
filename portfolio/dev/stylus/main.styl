@@ -28,17 +28,29 @@ h1, h2, header
 // NAVIGATION FIXE //
 /* ----------------*/
 header
+  background #CCC
   position fixed
-  height 4.8em
+  height auto
   top 0em
   width 100%
   z-index 100
   font-size 1.5em
   h1
-    background #CCC
     color:#000
+    margin: 0 auto;
     padding .5em 0
-    text-align center
+    text-align right
+    width: 60%;
+aside
+  width: 60%;
+  margin: 0 auto;
+  text-align right
+  right 0
+  font-size 2em
+  margin-bottom .5em
+  ul li
+    display inline-block
+    margin-left .25em
 nav
   position fixed
   top 40%
@@ -70,6 +82,7 @@ nav
         display: inline-block;
         text-indent -9999em
 
+
 /* ----------------*/
 //    CONTENU      //
 /* ----------------*/
@@ -78,15 +91,6 @@ nav
   width 60%
   max-width 996px
   margin 100px auto
-  aside
-    text-align right
-    top -30px
-    right 0
-    font-size 3em
-    margin-bottom .5em
-    ul li
-      display inline-block
-      margin-left .25em
   .container
     position relative
     z-index 0
@@ -329,6 +333,18 @@ nav
           height 500px
         
     
+@media screen and (max-width: 480px)
+  header 
+    h1, aside
+      font-size 1em;
+      width 90%
+      text-align center
+    
+  .wrapper
+    width: 90%;
+    .container section .content
+      &:after, &:before
+        border-width: 0
     
 
 /* icon styles */
